@@ -1,0 +1,12 @@
+{
+    "_description":"Checks if the demon is chasing a player",
+
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+
+    "predicate":{
+       "targeted_entity":{
+            "type": "minecraft:player"
+        }
+    }
+}
