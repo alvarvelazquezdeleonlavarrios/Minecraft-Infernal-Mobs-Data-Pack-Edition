@@ -27,9 +27,9 @@ scoreboard players set $Math _math.sqrt.value 0
 scoreboard players set $Math _math.sqrt.result_power_2 0
 scoreboard players set $Math _math.sqrt.result 0
 
-#------- Prints a message in the chat when this DataPack is loaded -------
-tellraw @a {"text": "*********************************************************************","color": "#1A3AA3"}
-tellraw @a {"text": "--------------------- Infernal Mobs DataPack ------------------------"}
-tellraw @a {"text": "-------------------------- Version: 1.0 -----------------------------"}
-tellraw @a {"text": "--------- Developed by: Alvar Velázquez de León Lavarrios -----------","color": "#B8B8B8"}
-tellraw @a {"text": "*********************************************************************","color": "#1A3AA3"}
+#------- Prints a message in the chat when this Data Pack is loaded -------
+tellraw @a {"text": "***************************************************************************","color": "#1A3AA3"}
+tellraw @a {"text": "--------------- Infernal Mobs Data Pack -------------"}
+tellraw @a {"text": "-------------------- Version: 1.0 -------------------"}
+tellraw @a {"text": "--- Developed by: Alvar Velázquez de León Lavarrios ---","color": "#B8B8B8"}
+tellraw @a {"text": "***************************************************************************","color": "#1A3AA3"}
