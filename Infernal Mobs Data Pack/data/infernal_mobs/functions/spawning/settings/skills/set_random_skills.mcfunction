@@ -1,4 +1,4 @@
-#******************* Spawning --> Settings --> Add Random Skills *******************
+#******************* Spawning --> Settings --> Skills --> Set Random Skills *******************
 
 
 #------- Defines the next skill that this mob will be able to use during the game -------
@@ -20,5 +20,5 @@ execute if score @s _tmp.current_skill matches 0 if score @s _tmp.skills_count m
 
 #------- Recursively, adds the left skills to this mob -------
 # if (mob.tmp_skills_count >= 1):
-#     mob.AddSkills();
-execute if score @s _tmp.skills_count matches 1.. run function infernal_mobs:spawning/settings/add_skills
+#     mob.SetRandomSkills();
+execute if score @s _tmp.skills_count matches 1.. run function infernal_mobs:spawning/settings/skills/set_random_skills

@@ -16,7 +16,7 @@ scoreboard objectives add _const.27 dummy
 scoreboard objectives add _const.100 dummy
 
 scoreboard objectives add _healthbar.current_search dummy
-scoreboard objectives add _healthbar.found_available dummy
+scoreboard objectives add _healthbar.already_found dummy
 scoreboard objectives add _healthbar.current_id dummy
 
 

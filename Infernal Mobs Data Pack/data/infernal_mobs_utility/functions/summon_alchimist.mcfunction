@@ -1,12 +1,17 @@
 
-summon zombie ~ ~ ~ {Tags:["infernalMob"]}
+summon zombie ~ ~ ~ {Tags:["infernalMob","rare"]}
+scoreboard players set @e[type=zombie, sort=nearest, limit=1] _healthbar.current_id 0
+
+execute at @s as @e[type=zombie, sort=nearest, limit=1] run function infernal_mobs:spawning/settings/skills/add_alchimist
+execute at @s as @e[type=zombie, sort=nearest, limit=1] run function infernal_mobs:spawning/settings/names/set_name
+
+
+
 
 # sign.text1 = mob.Tags[0] + " Elite";
 #setblock ~ ~ ~ oak_sign{Text1:'[{"text":" Elite"},{"selector":"@e[tag=infernalMob,limit=1,sort=nearest]","interpret":true}]'} replace
 # mob.Tags[0] = sign.text1;
 #data modify entity @e[type=zombie, limit=1, sort=nearest] Tags[0] set from block ~ ~ ~ Text1
-
-
 
 
 # sign.text2 = mob.Tags[0];
@@ -28,13 +33,3 @@ summon zombie ~ ~ ~ {Tags:["infernalMob"]}
 
 # Importante #2 para que funcione!!
 #data modify entity @e[tag=infernalMob, limit=1, sort=nearest] CustomName set value ""
-
-
-
-
-execute at @s as @e[type=zombie, sort=nearest, limit=1] run function infernal_mobs:spawning/settings/skills/add_alchimist
-execute at @s as @e[type=zombie, sort=nearest, limit=1] run function infernal_mobs:spawning/settings/set_random_name
-
-
-# mob.AddBossBar();
-#execute at @s as @e[type=zombie, tag=infernalMob, sort=nearest, limit=1] run function infernal_mobs:mobs/find_available_healthbar
