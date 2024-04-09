@@ -41,17 +41,37 @@ bossbar add _healthbar.1 ""
 bossbar add _healthbar.2 ""
 bossbar add _healthbar.3 ""
 bossbar add _healthbar.4 ""
-#bossbar add _healthbar.5 ""
-#bossbar add _healthbar.6 ""
-#bossbar add _healthbar.7 ""
-#bossbar add _healthbar.8 ""
-#bossbar add _healthbar.9 ""
-#bossbar add _healthbar.10 ""
+bossbar add _healthbar.5 ""
+bossbar add _healthbar.6 ""
+bossbar add _healthbar.7 ""
+bossbar add _healthbar.8 ""
+bossbar add _healthbar.9 ""
+bossbar add _healthbar.10 ""
+bossbar add _healthbar.11 ""
+bossbar add _healthbar.12 ""
+bossbar add _healthbar.13 ""
+bossbar add _healthbar.14 ""
+bossbar add _healthbar.15 ""
+bossbar add _healthbar.16 ""
+bossbar add _healthbar.17 ""
+bossbar add _healthbar.18 ""
+bossbar add _healthbar.19 ""
+bossbar add _healthbar.20 ""
+bossbar add _healthbar.21 ""
+bossbar add _healthbar.22 ""
+bossbar add _healthbar.23 ""
+bossbar add _healthbar.24 ""
+bossbar add _healthbar.25 ""
+bossbar add _healthbar.26 ""
+bossbar add _healthbar.27 ""
+bossbar add _healthbar.28 ""
+bossbar add _healthbar.29 ""
+bossbar add _healthbar.30 ""
 
 
 #------- Prints a message in the chat when this Data Pack is loaded -------
-tellraw @a {"text": "***************************************************************************","color": "#1A3AA3"}
+tellraw @a {"text": "***************************************************************************","color":"#1A3AA3"}
 tellraw @a {"text": "--------------- Infernal Mobs Data Pack -------------"}
 tellraw @a {"text": "-------------------- Version: 1.0 -------------------"}
-tellraw @a {"text": "--- Developed by: Alvar Velázquez de León Lavarrios ---","color": "#B8B8B8"}
-tellraw @a {"text": "***************************************************************************","color": "#1A3AA3"}
+tellraw @a {"text": "--- Developed by: Alvar Velázquez de León Lavarrios ---","color":"#B8B8B8"}
+tellraw @a {"text": "***************************************************************************","color":"#1A3AA3"}

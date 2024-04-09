@@ -1,7 +1,7 @@
 #******************* Gameplay --> Update Mobs Skills *******************
 
 
-#++++++++++++++++++++++ Alchimist ++++++++++++++++++++++
+#++++++++++++++++++++++++++++++++ Alchimist ++++++++++++++++++++++++++++++++
 #------- If the current timer ends, the mob executes the alchimist skill -------
 # if (mob.tags.Find("Alchimist") == true && mob.alchimist_current_time <= 0 && mob.isChasingPlayer() == true):
 #   mob.skills.Alchimist();
@@ -16,7 +16,7 @@ execute if entity @s[tag=alchimist, scores={_skills.alchimist.current_time=1..},
 # if (mob.tags.Find("Alchimist") == true && mob.alchimist_current_time <= 0 && mob.isChasingPlayer() == true):
 #   mob.alchimist_current_time = mob.alchimist_max_time;
 execute if entity @s[tag=alchimist, scores={_skills.alchimist.current_time=..0}, predicate=infernal_mobs:chasing_player] run scoreboard players operation @s _skills.alchimist.current_time = @s _skills.alchimist.max_time
-#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 #++++++++++++++++++++++ ....others skill below here.... ++++++++++++++++++++++

@@ -24,6 +24,9 @@ execute store result score @s _tmp.entity.pos.x run data get entity @s Pos[0] 10
 execute store result score @s _tmp.entity.pos.y run data get entity @s Pos[1] 1000000
 execute store result score @s _tmp.entity.pos.z run data get entity @s Pos[2] 1000000
 
+#------- Forces to set the potion's vector position at a "lower height". This allows to try throwing it at player's head -------
+scoreboard players remove @s _tmp.entity.pos.y 600000
+
 #------- Gets the nearest player's position (x2, y2, z2) -------
 execute store result score @s _tmp.player.pos.x run data get entity @p[gamemode=survival] Pos[0] 1000000
 execute store result score @s _tmp.player.pos.y run data get entity @p[gamemode=survival] Pos[1] 1000000
