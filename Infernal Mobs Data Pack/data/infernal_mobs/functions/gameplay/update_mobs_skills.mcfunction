@@ -1,6 +1,14 @@
 #******************* Gameplay --> Update Mobs Skills *******************
 
 
+#++++++++++++++++++++++++++++++++ 1UP ++++++++++++++++++++++++++++++++
+#------- If the mob hasn't used the skill to heal itself full, still checking it's current health -------
+# if (mob.tags.Find("1UP") == true && mob.1up_already_healed == false):
+#   mob.skills.1UP();
+execute if entity @s[tag=1up, scores={_skills.1up.already_healed=0}] at @s run function infernal_mobs:skills/1up
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
 #++++++++++++++++++++++++++++++++ Alchimist ++++++++++++++++++++++++++++++++
 #------- If the current timer ends, the mob executes the alchimist skill -------
 # if (mob.tags.Find("Alchimist") == true && mob.alchimist_current_time <= 0 && mob.isChasingPlayer() == true):
