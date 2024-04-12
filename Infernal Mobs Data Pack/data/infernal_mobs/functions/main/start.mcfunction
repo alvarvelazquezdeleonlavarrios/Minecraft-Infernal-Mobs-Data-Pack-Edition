@@ -11,7 +11,11 @@ scoreboard objectives add _math.sqrt.result_power_2 dummy
 scoreboard objectives add _math.sqrt.result dummy
 
 scoreboard objectives add _const.1 dummy
+scoreboard objectives add _const.2 dummy
+scoreboard objectives add _const.3 dummy
 scoreboard objectives add _const.4 dummy
+scoreboard objectives add _const.8 dummy
+scoreboard objectives add _const.10 dummy
 scoreboard objectives add _const.27 dummy
 scoreboard objectives add _const.100 dummy
 
@@ -22,7 +26,11 @@ scoreboard objectives add _healthbar.current_id dummy
 
 #------- Creates a fake player named "$Constants" that will contain the value of the constants created previously, and that will be used for the internal logic -------
 scoreboard players set $Constants _const.1 1
+scoreboard players set $Constants _const.2 2
+scoreboard players set $Constants _const.3 3
 scoreboard players set $Constants _const.4 4
+scoreboard players set $Constants _const.8 8
+scoreboard players set $Constants _const.10 10
 scoreboard players set $Constants _const.27 27
 scoreboard players set $Constants _const.100 100
 

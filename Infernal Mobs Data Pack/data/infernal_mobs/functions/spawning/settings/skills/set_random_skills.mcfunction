@@ -9,6 +9,9 @@ scoreboard players operation @s _tmp.current_skill %= $Constants _const.27
 kill @e[type=area_effect_cloud,tag=random_uuid, limit=1, sort=nearest]
 
 
+
+
+
 #------- If wasn't added previously, adds the "Alchimist" skill to this mob -------
 # if (mob.tmp_current_skill == 0 && mob.tmp_skills_count >= 1 && mob.tags.Find("alchimist") == false):
 #     mob.skills.Add( new Skill("Alchimist") );
