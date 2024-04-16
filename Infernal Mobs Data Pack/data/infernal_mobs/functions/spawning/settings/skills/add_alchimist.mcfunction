@@ -18,6 +18,6 @@ execute store result score @s _skills.alchimist.current_time run data get entity
 scoreboard players operation @s _skills.alchimist.current_time %= @s _skills.alchimist.max_time
 kill @e[type=area_effect_cloud,tag=random_uuid, limit=1, sort=nearest]
 
-#------- Decrements the number of skills left for adding to this mob -------
+#------- Decreases the number of skills left for adding to this mob -------
 # mob.tmp_skills_count--;
 scoreboard players operation @s _tmp.skills_count -= $Constants _const.1

@@ -26,6 +26,6 @@ execute store result score @s _skills.1up.max_health run data get entity @s Heal
 execute store result score @s _skills.1up.health_20percent run data get entity @s Health 1
 scoreboard players operation @s _skills.1up.health_20percent /= $Constants _const.5
 
-#------- Decrements the number of skills left for adding to this mob -------
+#------- Decreases the number of skills left for adding to this mob -------
 # mob.tmp_skills_count--;
 scoreboard players operation @s _tmp.skills_count -= $Constants _const.1

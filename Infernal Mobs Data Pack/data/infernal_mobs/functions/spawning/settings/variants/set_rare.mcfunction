@@ -24,7 +24,7 @@ scoreboard players set @s _tmp.new_health 0
 scoreboard players set @s _tmp.health_multiplier 0
 
 
-#++++++++++++++++++++++ Increase Mob's Health and Max Health ++++++++++++++++++++++++++++
+#++++++++++++++++++++++ Increase Mob's Health and Max Health (Rare Variant) ++++++++++++++++++++++++++++
 #------- Gets the mob's health and stores it on a temporary variable -------
 # mob.tmp_new_health = mobs.health;
 # mob.tmp_health_multiplier = mobs.health;
@@ -41,8 +41,17 @@ scoreboard players operation @s _tmp.new_health += @s _tmp.health_multiplier
 #------- Sets the new value for the mob's health and max health -------
 # mob.max_health = mobs.tmp_new_health;
 # mob.health = mobs.tmp_new_health;
-execute store result entity @s Attributes[{Name:"generic.max_health"}].Base double 1 run scoreboard players get @s _tmp.new_health
+execute store result entity @s Attributes[{Name:"minecraft:generic.max_health"}].Base double 1 run scoreboard players get @s _tmp.new_health
 execute store result entity @s Health float 1 run scoreboard players get @s _tmp.new_health
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+#++++++++++++++++++ Sets Mob's default Attack Damage (Rare Variant) +++++++++++++++++++++++
+#------- For hostile mobs available since version 1.0.x and before version 1.16.x -------
+execute if entity @s[type=zombie] run data merge entity @s {Attributes:[{Name:"minecraft:generic.attack_damage",Base:3}]}
+
+#------- For hostile mobs available since version 1.16.x (otherwise, comment the code lines below) -------
+
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 

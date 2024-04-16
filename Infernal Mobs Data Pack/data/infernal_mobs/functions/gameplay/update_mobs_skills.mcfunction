@@ -1,7 +1,7 @@
 #******************* Gameplay --> Update Mobs Skills *******************
 
 
-#++++++++++++++++++++++++++++++++ 1UP ++++++++++++++++++++++++++++++++
+#++++++++++++++++++++++++++++++++++ 1UP ++++++++++++++++++++++++++++++++++
 #------- If the mob hasn't used the skill to heal itself full, still checking it's current health -------
 # if (mob.tags.Find("1UP") == true && mob.1up_already_healed == false):
 #   mob.skills.1UP();
@@ -24,6 +24,11 @@ execute if entity @s[tag=alchimist, scores={_skills.alchimist.current_time=1..},
 # if (mob.tags.Find("Alchimist") == true && mob.alchimist_current_time <= 0 && mob.isChasingPlayer() == true):
 #   mob.alchimist_current_time = mob.alchimist_max_time;
 execute if entity @s[tag=alchimist, scores={_skills.alchimist.current_time=..0}, predicate=infernal_mobs:chasing_player] run scoreboard players operation @s _skills.alchimist.current_time = @s _skills.alchimist.max_time
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+#++++++++++++++++++++++++++++++++ Berserk ++++++++++++++++++++++++++++++++
+# The berserk skill is executed each time a player gets the advancement "Berserk Mob Hit Player" when a mob with the "berserk" tag hits the player.
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
