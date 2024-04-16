@@ -5,6 +5,11 @@
 # mob.tags.Add("berserk");
 tag @s add berserk
 
+#------- Adds the variables that this mob will use for calling the berserk skill functions -------
+# mob.AddVariable( berserk_current_health, 0);
+scoreboard players set @s _skills.berserk.current_health 0
+
+
 #++++++++++++++++++++++ Duplicate mob's Attack Damage ++++++++++++++++++++++++++++
 #------- Creates some temporary variables to set some mob's attributes -------
 # int tmp_current_attack_damage = new int();
@@ -22,6 +27,7 @@ execute store result score @s _tmp.current_attack_damage run data get entity @s 
 scoreboard players operation @s _tmp.current_attack_damage *= $Constants _const.2
 execute store result entity @s Attributes[{Name:"minecraft:generic.attack_damage"}].Base double 1 run scoreboard players get @s _tmp.current_attack_damage
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 
 #----- Removes the temporary variables -------
 # deleteVariable( tmp_current_attack_damage );
