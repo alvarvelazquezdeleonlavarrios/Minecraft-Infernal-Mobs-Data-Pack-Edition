@@ -23,6 +23,11 @@ execute if entity @s[tag=alchimist] run data modify block ~ ~ ~ Text1 set value 
 #   sign.text1 = sign.text1 + " berserk";
 execute if entity @s[tag=berserk] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" berserk"}]'
 
+#------- If the mob has the "blastoff" skill, uses it to build its name -------
+# if (mob.Tags.Find("blastoff") == true):
+#   sign.text1 = sign.text1 + " blastoff";
+execute if entity @s[tag=blastoff] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" blastoff"}]'
+
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

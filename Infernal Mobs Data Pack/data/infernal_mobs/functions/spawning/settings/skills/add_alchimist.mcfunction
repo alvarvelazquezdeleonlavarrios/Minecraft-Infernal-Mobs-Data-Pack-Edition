@@ -12,7 +12,7 @@ scoreboard players set @s _skills.alchimist.max_time 100
 scoreboard players set @s _skills.alchimist.current_time 0
 
 #------- Sets a random, value for the current time left for executing the skill -------
-# mob.alchimist_current_time = Random.Range(0,199);
+# mob.alchimist_current_time = Random.Range(0,99);
 summon area_effect_cloud ~ ~ ~ {Tags:["random_uuid"]}
 execute store result score @s _skills.alchimist.current_time run data get entity @e[type=area_effect_cloud,tag=random_uuid,limit=1] UUID[0] 1
 scoreboard players operation @s _skills.alchimist.current_time %= @s _skills.alchimist.max_time

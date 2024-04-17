@@ -12,6 +12,6 @@
     }
   },
   "rewards": {
-    "function": "infernal_mobs:events/berserk_mob_hit_player"
+    "function": "infernal_mobs:skills/internal_logic/events/berserk_mob_hit_player"
   }
 }

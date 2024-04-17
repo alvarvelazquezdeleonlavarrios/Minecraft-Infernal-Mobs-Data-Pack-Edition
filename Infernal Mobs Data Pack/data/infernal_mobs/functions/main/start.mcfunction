@@ -9,6 +9,8 @@ scoreboard objectives add _skills.1up.max_health dummy
 scoreboard objectives add _skills.alchimist.max_time dummy
 scoreboard objectives add _skills.alchimist.current_time dummy
 scoreboard objectives add _skills.berserk.current_health dummy
+scoreboard objectives add _skills.blastoff.max_time dummy
+scoreboard objectives add _skills.blastoff.current_time dummy
 
 scoreboard objectives add _math.sqrt.input dummy
 scoreboard objectives add _math.sqrt.value dummy

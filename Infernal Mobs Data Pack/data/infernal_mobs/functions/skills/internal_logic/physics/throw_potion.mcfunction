@@ -28,9 +28,9 @@ execute store result score @s _tmp.entity.pos.z run data get entity @s Pos[2] 10
 scoreboard players remove @s _tmp.entity.pos.y 600000
 
 #------- Gets the nearest player's position (x2, y2, z2) -------
-execute store result score @s _tmp.player.pos.x run data get entity @p[gamemode=survival] Pos[0] 1000000
-execute store result score @s _tmp.player.pos.y run data get entity @p[gamemode=survival] Pos[1] 1000000
-execute store result score @s _tmp.player.pos.z run data get entity @p[gamemode=survival] Pos[2] 1000000
+execute store result score @s _tmp.player.pos.x run data get entity @p[gamemode=survival, distance=..40] Pos[0] 1000000
+execute store result score @s _tmp.player.pos.y run data get entity @p[gamemode=survival, distance=..40] Pos[1] 1000000
+execute store result score @s _tmp.player.pos.z run data get entity @p[gamemode=survival, distance=..40] Pos[2] 1000000
 
 #------- Makes the substraction of the two positions: P2 = P2 - P1. Generates the potion's motion vector -------
 scoreboard players operation @s _tmp.player.pos.x -= @s _tmp.entity.pos.x

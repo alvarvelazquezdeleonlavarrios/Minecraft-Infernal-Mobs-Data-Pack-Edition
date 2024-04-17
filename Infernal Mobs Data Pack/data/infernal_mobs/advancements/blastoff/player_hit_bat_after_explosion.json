@@ -11,6 +11,6 @@
       }
     },
     "rewards": {
-      "function": "infernal_mobs_utility:blastoff/trigger_after"
+      "function": "infernal_mobs:skills/internal_logic/events/blastoff_player_hit_bat_after_explosion"
     }
 }
