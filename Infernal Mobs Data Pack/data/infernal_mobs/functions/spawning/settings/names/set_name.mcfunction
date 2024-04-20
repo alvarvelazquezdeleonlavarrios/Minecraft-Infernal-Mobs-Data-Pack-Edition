@@ -28,20 +28,33 @@ execute if entity @s[tag=berserk] run data modify block ~ ~ ~ Text1 set value '[
 #   sign.text1 = sign.text1 + " blastoff";
 execute if entity @s[tag=blastoff] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" blastoff"}]'
 
+#------- If the mob has the "bulwark" skill, uses it to build its name -------
+# if (mob.Tags.Find("bulwark") == true):
+#   sign.text1 = sign.text1 + " bulwark";
+execute if entity @s[tag=bulwark] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" bulwark"}]'
+
+#------- If the mob has the "cloacking" skill, uses it to build its name -------
+# if (mob.Tags.Find("cloacking") == true):
+#   sign.text1 = sign.text1 + " cloacking";
+execute if entity @s[tag=cloacking] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" cloacking"}]'
+
+#------- If the mob has the "darkness" skill, uses it to build its name -------
+# if (mob.Tags.Find("darkness") == true):
+#   sign.text1 = sign.text1 + " darkness";
+execute if entity @s[tag=darkness] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" darkness"}]'
+
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 
 #+++++++++++++++++++++++++++++++++++++ Variant Mob Name ++++++++++++++++++++++++++++++++++++++
-
-#------- Adds the final text for a rare mob name -------
+#------- Adds the final text for a rare mob -------
 # if (mob.Tags.Find("rare")):
 #   sign.text1 = "Rare " + mob.name + sign.text1;
 execute if entity @s[tag=rare] run data modify block ~ ~ ~ Text1 set value '[{"text":"Rare "},{"selector":"@e[tag=rare,limit=1,sort=nearest]","interpret":true},{"nbt":"Text1","block":"~ ~ ~","interpret":true}]'
-
-
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 
 
 #------- Temporary stores the built name on the mob's Custom Name field -------

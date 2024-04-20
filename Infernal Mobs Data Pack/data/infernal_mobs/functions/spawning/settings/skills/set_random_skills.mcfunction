@@ -3,10 +3,10 @@
 
 #------- Defines the next skill that this mob will be able to use during the game -------
 # mob.tmp_current_skill = Random.Range(0,26);
-summon area_effect_cloud ~ ~ ~ {Tags:["random_uuid"]}
+summon area_effect_cloud ~ ~ ~ {Tags:["random_uuid","random_skills"]}
 execute store result score @s _tmp.current_skill run data get entity @e[type=area_effect_cloud,tag=random_uuid,limit=1] UUID[0] 1
 scoreboard players operation @s _tmp.current_skill %= $Constants _const.27
-kill @e[type=area_effect_cloud,tag=random_uuid, limit=1, sort=nearest]
+kill @e[type=area_effect_cloud, tag=random_uuid, tag=random_skills, limit=1, sort=nearest]
 
 
 

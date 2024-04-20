@@ -5,7 +5,7 @@
         "conditions": {
           "entity": {
             "type": "minecraft:bat",
-            "nbt": "{Tags:[\"after_explosion\"]}"
+            "nbt": "{Tags:[\"blastoff_after_explosion\"]}"
           }
         }
       }

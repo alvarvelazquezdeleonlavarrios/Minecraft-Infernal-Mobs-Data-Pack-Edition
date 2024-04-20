@@ -11,10 +11,10 @@ scoreboard players set @s _tmp.alchimist.random_potion 0
 
 #------- Defines the probability of the potion to be thrown -------
 # mob.tmp_alchimist_random_potion = Random.Range(0,99);
-summon area_effect_cloud ~ ~ ~ {Tags:["random_uuid"]}
+summon area_effect_cloud ~ ~ ~ {Tags:["random_uuid","random_potion"]}
 execute store result score @s _tmp.alchimist.random_potion run data get entity @e[type=area_effect_cloud,tag=random_uuid,limit=1] UUID[0] 1
 scoreboard players operation @s _tmp.alchimist.random_potion %= $Constants _const.100
-kill @e[type=area_effect_cloud,tag=random_uuid, limit=1, sort=nearest]
+kill @e[type=area_effect_cloud, tag=random_uuid, tag=random_potion, limit=1, sort=nearest]
 
 
 #++++++++++++++++++++++++++++++++++ Alchimist Potions List +++++++++++++++++++++++++++++++++++++++++

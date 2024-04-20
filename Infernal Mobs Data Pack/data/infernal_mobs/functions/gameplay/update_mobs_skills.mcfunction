@@ -9,7 +9,6 @@ execute if entity @s[tag=1up, scores={_skills.1up.already_healed=0}] at @s run f
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-
 #++++++++++++++++++++++++++++++++ Alchimist ++++++++++++++++++++++++++++++++
 #------- If the current timer ends, the mob executes the alchimist skill -------
 # if (mob.tags.Find("alchimist") == true && mob.alchimist_current_time <= 0 && mob.isChasingPlayer() == true):
@@ -28,11 +27,9 @@ execute if entity @s[tag=alchimist, scores={_skills.alchimist.current_time=..0},
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-
 #++++++++++++++++++++++++++++++++ Berserk ++++++++++++++++++++++++++++++++
-# The berserk skill is executed each time a player gets the advancement "Berserk Mob Hit Player" when a mob with the "berserk" tag hits the player.
+# The berserk skill is executed each time a player gets the "Berserk Mob Hit Player" advancement when a mob with the "berserk" tag hits the player.
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 
 
 #++++++++++++++++++++++++++++++++ Blastoff ++++++++++++++++++++++++++++++++
@@ -50,6 +47,21 @@ execute if entity @s[tag=blastoff, scores={_skills.blastoff.current_time=1..}, p
 # if (mob.tags.Find("blastoff") == true && mob.blastoff_current_time <= 0 && mob.isChasingPlayer() == true):
 #   mob.blastoff_current_time = mob.blastoff_max_time;
 execute if entity @s[tag=blastoff, scores={_skills.blastoff.current_time=..0}, predicate=infernal_mobs:chasing_player] run scoreboard players operation @s _skills.blastoff.current_time = @s _skills.blastoff.max_time
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+#++++++++++++++++++++++++++++++++ Bulwark ++++++++++++++++++++++++++++++++
+# The bulwark skill doesn't need to update because it's a start skill only. Even if the mob spawns with armor items, the game automatically calculates and adds the corresponding damage resistance values.
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+#++++++++++++++++++++++++++++++++ Cloacking ++++++++++++++++++++++++++++++++
+# The cloacking skill is executed each time a player gets the "Cloacking Player Mob Hit" advancement when player hits a mob with the "cloacking" tag.
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+#++++++++++++++++++++++++++++++++ Darkness ++++++++++++++++++++++++++++++++
+# The darkness skill is executed each time a player gets the "Darkness Player Mob Hit" advancement when player hits a mob with the "darkness" tag.
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
