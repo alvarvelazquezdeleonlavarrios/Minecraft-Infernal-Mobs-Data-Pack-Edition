@@ -1,42 +1,53 @@
 #******************* Skills --> Internal Logic --> Summon --> Alchimist Potion *******************
 
 
-#------- Creates a temporary variable to summon a random potion -------
-# int tmp_alchimist_random_potion = new int();
-scoreboard objectives add _tmp.alchimist.random_potion dummy
+#------- Creates a temporary variable to summon a specific potion -------
+# int tmp_alchimist_current_potion_id = new int();
+scoreboard objectives add _tmp.alchimist.current_potion_id dummy
 
-#------- Adds the temporary variable to this mob -------
-# mob.addVariable( tmp_alchimist_random_potion, 0 );
-scoreboard players set @s _tmp.alchimist.random_potion 0
-
-#------- Defines the probability of the potion to be thrown -------
-# mob.tmp_alchimist_random_potion = Random.Range(0,99);
-summon area_effect_cloud ~ ~ ~ {Tags:["random_uuid","random_potion"]}
-execute store result score @s _tmp.alchimist.random_potion run data get entity @e[type=area_effect_cloud,tag=random_uuid,limit=1] UUID[0] 1
-scoreboard players operation @s _tmp.alchimist.random_potion %= $Constants _const.100
-kill @e[type=area_effect_cloud, tag=random_uuid, tag=random_potion, limit=1, sort=nearest]
+#------- Adds the temporary variable to this mob. Sets the value for an "Instant Damage" potion (default) -------
+# mob.addVariable( tmp_alchimist_current_potion_id, 0 );
+scoreboard players set @s _tmp.alchimist.current_potion_id 0
 
 
 #++++++++++++++++++++++++++++++++++ Alchimist Potions List +++++++++++++++++++++++++++++++++++++++++
-#------- If the probability value is between 0 and 24, summons a poison potion -------
-# if (mob.tmp_alchimist_random_potion >= 0 && mob.tmp_alchimist_random_potion <= 24 ):
-#   Potion potion = new Potion("Poison");
-execute if score @s _tmp.alchimist.random_potion matches 0..24 run summon potion ~ ~1 ~ {Item:{id:"minecraft:splash_potion",Count:1b,tag:{Potion:"minecraft:poison"}}}
+#------- If the player is far from this mob, still has a lot of health and doesn't have the poison effect, sets the variable for a "Poison" potion -------
+# if (player.distance <= 40 && player.health >= 8.0f && player.effects.Find("Poison") == false):
+#   tmp_alchimist_current_potion_id = 1;
+execute if entity @a[gamemode=survival, limit=1, sort=nearest, distance=..40, scores={_health_points=8..}, nbt=!{ActiveEffects:[{Id:19}]}] run scoreboard players set @s _tmp.alchimist.current_potion_id 1
 
-#------- If the probability value is between 25 and 49, summons a instant damnage potion -------
-# if (mob.tmp_alchimist_random_potion >= 25 && mob.tmp_alchimist_random_potion <= 49 ):
+#------- If the player is far from this mob and doesn't have the slowness effect, sets the variable for a "Slowness" potion -------
+# if (player.distance == [8,40] && player.effects.Find("Slowness") == false):
+#   tmp_alchimist_current_potion_id = 2;
+execute if entity @a[gamemode=survival, limit=1, sort=nearest, distance=8..40, nbt=!{ActiveEffects:[{Id:2}]}] run scoreboard players set @s _tmp.alchimist.current_potion_id 2
+
+#------- If the player is near from this mob and doesn't have the weakness effect, sets the variable for a "Weakness" potion -------
+# if (player.distance <= 3 && player.effects.Find("Weakness") == false):
+#   tmp_alchimist_current_potion_id = 3;
+execute if entity @a[gamemode=survival, limit=1, sort=nearest, distance=..3, nbt=!{ActiveEffects:[{Id:18}]}] run scoreboard players set @s _tmp.alchimist.current_potion_id 3
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+#++++++++++++++++++++++++++++++++++ Generating Potion +++++++++++++++++++++++++++++++++++++++++
+#------- Summons an "Instant Damage" potion (default) -------
+# if (tmp_alchimist_current_potion_id == 0):
 #   Potion potion = new Potion("Instant Damage");
-execute if score @s _tmp.alchimist.random_potion matches 25..49 run summon potion ~ ~1 ~ {Item:{id:"minecraft:splash_potion",Count:1b,tag:{Potion:"minecraft:harming"}}}
+execute if score @s _tmp.alchimist.current_potion_id matches 0 run summon potion ~ ~1 ~ {Item:{id:"minecraft:splash_potion",Count:1b,tag:{Potion:"minecraft:harming"}}}
 
-#------- If the probability value is between 50 and 74, summons a slowness potion -------
-# if (mob.tmp_alchimist_random_potion >= 50 && mob.tmp_alchimist_random_potion <= 74 ):
+#------- Summons a "Poison" potion -------
+# if (tmp_alchimist_current_potion_id == 1):
+#   Potion potion = new Potion("Poison");
+execute if score @s _tmp.alchimist.current_potion_id matches 1 run summon potion ~ ~1 ~ {Item:{id:"minecraft:splash_potion",Count:1b,tag:{Potion:"minecraft:poison"}}}
+
+#------- Summons a "Slowness" potion -------
+# if (tmp_alchimist_current_potion_id == 2):
 #   Potion potion = new Potion("Slowness");
-execute if score @s _tmp.alchimist.random_potion matches 50..74 run summon potion ~ ~1 ~ {Item:{id:"minecraft:splash_potion",Count:1b,tag:{Potion:"minecraft:slowness"}}}
+execute if score @s _tmp.alchimist.current_potion_id matches 2 run summon potion ~ ~1 ~ {Item:{id:"minecraft:splash_potion",Count:1b,tag:{Potion:"minecraft:slowness"}}}
 
-#------- If the probability value is between 75 and 99, summons a weakness potion -------
-# if (mob.tmp_alchimist_random_potion >= 75 && mob.tmp_alchimist_random_potion <= 99 ):
+#------- Summons a "Weakness" potion (default) -------
+# if (tmp_alchimist_current_potion_id == 3):
 #   Potion potion = new Potion("Weakness");
-execute if score @s _tmp.alchimist.random_potion matches 75..99 run summon potion ~ ~1 ~ {Item:{id:"minecraft:splash_potion",Count:1b,tag:{Potion:"minecraft:weakness"}}}
+execute if score @s _tmp.alchimist.current_potion_id matches 3 run summon potion ~ ~1 ~ {Item:{id:"minecraft:splash_potion",Count:1b,tag:{Potion:"minecraft:weakness"}}}
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
@@ -45,5 +56,4 @@ execute if score @s _tmp.alchimist.random_potion matches 75..99 run summon potio
 data modify entity @e[type=potion, sort=nearest, limit=1, distance=..2] Owner set from entity @s UUID
 
 #------- Removes the temporary variable -------
-# deleteVariable( tmp_alchimist_random_potion );
-scoreboard objectives remove _tmp.alchimist.random_potion
+scoreboard objectives remove _tmp.alchimist.current_potion_id

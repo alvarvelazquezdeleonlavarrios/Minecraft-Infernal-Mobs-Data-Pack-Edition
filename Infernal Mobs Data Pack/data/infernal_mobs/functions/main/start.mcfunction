@@ -33,6 +33,9 @@ scoreboard objectives add _healthbar.current_search dummy
 scoreboard objectives add _healthbar.already_found dummy
 scoreboard objectives add _healthbar.current_id dummy
 
+#------- Stores and updates automatically the health for each entity (including players) during the game -------
+scoreboard objectives add _health_points health
+
 
 #------- Creates a fake player named "$Constants" that will contain the value of the constants created previously, and that will be used for the internal logic -------
 scoreboard players set $Constants _const.1 1
