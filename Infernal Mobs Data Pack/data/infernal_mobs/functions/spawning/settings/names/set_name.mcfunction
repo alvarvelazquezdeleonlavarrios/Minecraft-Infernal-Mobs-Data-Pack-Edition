@@ -43,6 +43,16 @@ execute if entity @s[tag=cloacking] run data modify block ~ ~ ~ Text1 set value 
 #   sign.text1 = sign.text1 + " darkness";
 execute if entity @s[tag=darkness] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" darkness"}]'
 
+#------- If the mob has the "ender" skill, uses it to build its name -------
+# if (mob.Tags.Find("ender") == true):
+#   sign.text1 = sign.text1 + " ender";
+execute if entity @s[tag=ender] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" ender"}]'
+
+#------- If the mob has the "exhaust" skill, uses it to build its name -------
+# if (mob.Tags.Find("exhaust") == true):
+#   sign.text1 = sign.text1 + " exhaust";
+execute if entity @s[tag=exhaust] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" exhaust"}]'
+
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

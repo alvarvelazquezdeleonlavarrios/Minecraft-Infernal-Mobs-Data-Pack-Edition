@@ -56,14 +56,41 @@ execute if entity @s[tag=blastoff, scores={_skills.blastoff.current_time=..0}, p
 
 
 #++++++++++++++++++++++++++++++++ Cloacking ++++++++++++++++++++++++++++++++
-# The cloacking skill is executed each time a player gets the "Cloacking Player Mob Hit" advancement when player hits a mob with the "cloacking" tag.
+#------- If the current timer ends, the mob executes the cloacking skill -------
+# if (mob.tags.Find("cloacking") == true && mob.cloacking_current_time <= 0 && mob.isChasingPlayer() == true):
+#   mob.skills.cloacking();
+execute if entity @s[tag=cloacking, scores={_skills.cloacking.current_time=1}, predicate=infernal_mobs:chasing_player] at @s run function infernal_mobs:skills/cloacking
+
+#------- If the current timer hasn't finished, decreases its value -------
+# if (mob.tags.Find("cloacking") == true && mob.cloacking_current_time >= 1 && mob.isChasingPlayer() == true):
+#   mob.cloacking_current_time--;
+execute if entity @s[tag=cloacking, scores={_skills.cloacking.current_time=1..}, predicate=infernal_mobs:chasing_player] run scoreboard players remove @s _skills.cloacking.current_time 1
+
+#------- After executing the cloacking skill, if the current timer ends, resets the timer to its initial value -------
+# if (mob.tags.Find("cloacking") == true && mob.cloacking_current_time <= 0 && mob.isChasingPlayer() == true):
+#   mob.cloacking_current_time = mob.cloacking_max_time;
+execute if entity @s[tag=cloacking, scores={_skills.cloacking.current_time=..0}, predicate=infernal_mobs:chasing_player] run scoreboard players operation @s _skills.cloacking.current_time = @s _skills.cloacking.max_time
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 #++++++++++++++++++++++++++++++++ Darkness ++++++++++++++++++++++++++++++++
-# The darkness skill is executed each time a player gets the "Darkness Player Mob Hit" advancement when player hits a mob with the "darkness" tag.
+# The darkness skill is executed each time a player gets the "Darkness Player Hit Mob" or the "Darkness Mob Hit Player" advancement when player hits a mob with the "darkness" tag, or viceversa.
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+
+#++++++++++++++++++++++++++++++++ Ender ++++++++++++++++++++++++++++++++
+# The ender skill is executed each time the mob's current_time matches 0 and the player hits it, getting the "Ender Player Hit Mob" advancement. This update function just decreases the mob's current_time for the next ender skill execution.
+
+#------- If the current timer hasn't finished, decreases its value -------
+# if (mob.tags.Find("ender") == true && mob.ender_current_time >= 1):
+#   mob.ender_current_time--;
+execute if entity @s[tag=ender, scores={_skills.ender.current_time=1..}] run scoreboard players remove @s _skills.ender.current_time 1
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+#++++++++++++++++++++++++++++++++ Exhaust ++++++++++++++++++++++++++++++++
+# The exhaust skill is executed each time a player gets the "Exhaust Player Hit Mob" or the "Exhaust Mob Hit Player" advancement when player hits a mob with the "exhaust" tag, or viceversa.
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 #++++++++++++++++++++++ ....others skill below here.... ++++++++++++++++++++++

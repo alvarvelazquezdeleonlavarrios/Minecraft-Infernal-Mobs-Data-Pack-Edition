@@ -19,11 +19,11 @@ function infernal_mobs:spawning/settings/variants/set_rare
 
 #------- Sets a random number of skills that this mob will have, in a range between 2 and 4 -------
 # mob.tmp_skills_count = Random.Range(0,3) + 2;     // Range --> [2,4];
-summon area_effect_cloud ~ ~ ~ {Tags:["random_uuid","spawn"]}
-execute store result score @s _tmp.skills_count run data get entity @e[type=area_effect_cloud,tag=random_uuid,limit=1] UUID[0] 1
+summon area_effect_cloud ~ ~ ~ {Tags:["random_uuid","spawn_rare"]}
+execute store result score @s _tmp.skills_count run data get entity @e[type=area_effect_cloud, tag=random_uuid, tag=spawn_rare, limit=1] UUID[0] 1
 scoreboard players operation @s _tmp.skills_count %= $Constants _const.3
 scoreboard players operation @s _tmp.skills_count += $Constants _const.2
-kill @e[type=area_effect_cloud, tag=random_uuid, tag=spawn, limit=1, sort=nearest]
+kill @e[type=area_effect_cloud, tag=random_uuid, tag=spawn_rare, limit=1, sort=nearest]
 
 #------- Adds the random skills that this move will be able to use -------
 # mob.AddRandomSkills();

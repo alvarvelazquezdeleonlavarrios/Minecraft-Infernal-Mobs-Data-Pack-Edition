@@ -28,9 +28,9 @@ execute store result score @s _tmp.entity.pos.z run data get entity @s Pos[2] 10
 scoreboard players remove @s _tmp.entity.pos.y 600000
 
 #------- Gets the nearest player's position (x2, y2, z2) -------
-execute store result score @s _tmp.player.pos.x run data get entity @a[gamemode=survival, limit=1, sort=nearest, distance=..40] Pos[0] 1000000
-execute store result score @s _tmp.player.pos.y run data get entity @a[gamemode=survival, limit=1, sort=nearest, distance=..40] Pos[1] 1000000
-execute store result score @s _tmp.player.pos.z run data get entity @a[gamemode=survival, limit=1, sort=nearest, distance=..40] Pos[2] 1000000
+execute store result score @s _tmp.player.pos.x run data get entity @p[gamemode=survival, distance=..40] Pos[0] 1000000
+execute store result score @s _tmp.player.pos.y run data get entity @p[gamemode=survival, distance=..40] Pos[1] 1000000
+execute store result score @s _tmp.player.pos.z run data get entity @p[gamemode=survival, distance=..40] Pos[2] 1000000
 
 #------- Makes the substraction of the two positions: P2 = P2 - P1. Generates the potion's motion vector -------
 scoreboard players operation @s _tmp.player.pos.x -= @s _tmp.entity.pos.x
@@ -55,4 +55,4 @@ scoreboard objectives remove _tmp.player.pos.z
 scoreboard objectives remove _tmp.force.y
 
 #------- Plays a sound of throwing potion -------
-playsound entity.splash_potion.throw block @a ~ ~ ~ 1.0 1.0 0.1
+playsound entity.witch.throw block @a ~ ~ ~ 1.0 1.0 0.1

@@ -5,10 +5,10 @@
 # mob.AddVariable( healthbar_current_id, 0 );
 scoreboard players set @s _healthbar.current_id 0
 
-#------- Adds the new tags "infernalMob" and "rare" for this mob, to identify it during the game -------
-# mob.tags.Add("infernalMob");
+#------- Adds the new tags "Infernal_Mob" and "rare" for this mob, to identify it during the game -------
+# mob.tags.Add("Infernal_Mob");
 # mob.tags.Add("rare");
-tag @s add infernalMob
+tag @s add Infernal_Mob
 tag @s add rare
 
 #------- Creates some temporary variables to set some mob's attributes -------

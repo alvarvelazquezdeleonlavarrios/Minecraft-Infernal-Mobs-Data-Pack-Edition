@@ -4,12 +4,12 @@
         "trigger": "minecraft:player_hurt_entity",
         "conditions": {
           "entity": {
-            "nbt": "{Tags:[\"Infernal_Mob\",\"darkness\"]}"
+            "nbt": "{Tags:[\"Infernal_Mob\",\"exhaust\"]}"
           }
         }
       }
     },
     "rewards": {
-      "function": "infernal_mobs:skills/internal_logic/events/darkness_player_hit_mob"
+      "function": "infernal_mobs:skills/internal_logic/events/exhaust_player_hit_mob"
     }
 }
