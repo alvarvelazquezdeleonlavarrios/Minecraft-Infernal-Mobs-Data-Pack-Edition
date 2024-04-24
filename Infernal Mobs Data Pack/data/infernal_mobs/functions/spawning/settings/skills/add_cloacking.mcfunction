@@ -5,7 +5,7 @@
 # mob.tags.Add("cloacking");
 tag @s add cloacking
 
-#------- Adds the variables that this mob will use for calling the berserk skill functions -------
+#------- Adds the variables that this mob will use for calling the cloacking skill functions -------
 # mob.AddVariable( cloacking_max_time, 200);
 # mob.AddVariable( cloacking_current_time, 0);
 scoreboard players set @s _skills.cloacking.max_time 200

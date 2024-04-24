@@ -5,7 +5,7 @@
 # mob.tags.Add("ender");
 tag @s add ender
 
-#------- Adds the variables that this mob will use for calling the berserk skill functions -------
+#------- Adds the variables that this mob will use for calling the ender skill functions -------
 # mob.AddVariable( ender_max_time, 260);
 # mob.AddVariable( ender_current_time, 0);
 scoreboard players set @s _skills.ender.max_time 260

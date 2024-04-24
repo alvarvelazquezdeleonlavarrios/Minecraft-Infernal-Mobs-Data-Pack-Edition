@@ -7,7 +7,6 @@ setblock ~ ~ ~ oak_sign{Text1:'{"text":""}'} replace
 
 
 #+++++++++++++++++++++++++++++++++++++ Skills Name +++++++++++++++++++++++++++++++++++++++++++
-
 #------- If the mob has the "1up" skill, uses it to build its name -------
 # if (mob.Tags.Find("1up") == true):
 #   sign.text1 = sign.text1 + " 1UP";
@@ -53,6 +52,15 @@ execute if entity @s[tag=ender] run data modify block ~ ~ ~ Text1 set value '[{"
 #   sign.text1 = sign.text1 + " exhaust";
 execute if entity @s[tag=exhaust] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" exhaust"}]'
 
+#------- If the mob has the "fiery" skill, uses it to build its name -------
+# if (mob.Tags.Find("fiery") == true):
+#   sign.text1 = sign.text1 + " fiery";
+execute if entity @s[tag=fiery] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" fiery"}]'
+
+#------- If the mob has the "ghastly" skill, uses it to build its name -------
+# if (mob.Tags.Find("ghastly") == true):
+#   sign.text1 = sign.text1 + " ghastly";
+execute if entity @s[tag=ghastly] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" ghastly"}]'
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

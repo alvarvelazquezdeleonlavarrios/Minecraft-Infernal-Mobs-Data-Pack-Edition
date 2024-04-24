@@ -1,7 +1,7 @@
 #******************* Main --> Start *******************
 
 
-#------- Creates the game variables for the internal logic of the entities that will use them -------
+#------- Creates the game variables for the internal logic of the skills the entities will use. -------
 scoreboard objectives add _skills.1up.already_healed dummy
 scoreboard objectives add _skills.1up.health_20percent dummy
 scoreboard objectives add _skills.1up.current_health dummy
@@ -15,12 +15,10 @@ scoreboard objectives add _skills.cloacking.max_time dummy
 scoreboard objectives add _skills.cloacking.current_time dummy
 scoreboard objectives add _skills.ender.max_time dummy
 scoreboard objectives add _skills.ender.current_time dummy
+scoreboard objectives add _skills.ghastly.max_time dummy
+scoreboard objectives add _skills.ghastly.current_time dummy
 
-scoreboard objectives add _math.sqrt.input dummy
-scoreboard objectives add _math.sqrt.value dummy
-scoreboard objectives add _math.sqrt.result_power_2 dummy
-scoreboard objectives add _math.sqrt.result dummy
-
+#------- Creates some constants with fixed values for reseting and math operations. -------
 scoreboard objectives add _const.1 dummy
 scoreboard objectives add _const.2 dummy
 scoreboard objectives add _const.3 dummy
@@ -31,15 +29,15 @@ scoreboard objectives add _const.10 dummy
 scoreboard objectives add _const.27 dummy
 scoreboard objectives add _const.100 dummy
 
+#------- Creates the game variables for the logic that sets the healthbars to the mobs. -------
 scoreboard objectives add _healthbar.current_search dummy
 scoreboard objectives add _healthbar.already_found dummy
 scoreboard objectives add _healthbar.current_id dummy
 
-#------- Stores and updates automatically the health for each entity (including players) during the game -------
+#------- Stores and updates automatically the health for each entity (including players) during the game. -------
 scoreboard objectives add _health_points health
 
-
-#------- Creates a fake player named "$Constants" that will contain the value of the constants created previously, and that will be used for the internal logic -------
+#------- Creates a fake player named "$Constants" that will contain the value of the constants created previously. -------
 scoreboard players set $Constants _const.1 1
 scoreboard players set $Constants _const.2 2
 scoreboard players set $Constants _const.3 3
@@ -50,13 +48,7 @@ scoreboard players set $Constants _const.10 10
 scoreboard players set $Constants _const.27 27
 scoreboard players set $Constants _const.100 100
 
-#------- Creates a fake player named "$Math" to do the mathematical operations for some skills -------
-scoreboard players set $Math _math.sqrt.input 0
-scoreboard players set $Math _math.sqrt.value 0
-scoreboard players set $Math _math.sqrt.result_power_2 0
-scoreboard players set $Math _math.sqrt.result 0
-
-#------- Creates a fake player named "$Healthbars" to do the bossbar assignments to the current mobs in the game -------
+#------- Creates a fake player named "$Healthbars" to do the bossbar assignments to the current mobs in the game. -------
 scoreboard players set $Healthbars _healthbar.current_search 1
 scoreboard players set $Healthbars _healthbar.already_found 0
 

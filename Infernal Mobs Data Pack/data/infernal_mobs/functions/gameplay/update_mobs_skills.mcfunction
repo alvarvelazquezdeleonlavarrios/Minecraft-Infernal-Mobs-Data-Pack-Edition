@@ -93,4 +93,25 @@ execute if entity @s[tag=ender, scores={_skills.ender.current_time=1..}] run sco
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
+#++++++++++++++++++++++++++++++++ Fiery ++++++++++++++++++++++++++++++++
+# The fiery skill is executed each time a player gets the "Fiery Player Hit Mob" or the "Fiery Mob Hit Player" advancement when player hits a mob with the "fiery" tag, or viceversa.
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+#++++++++++++++++++++++++++++++++ Ghastly ++++++++++++++++++++++++++++++++
+#------- If the current timer ends, the mob executes the ghastly skill -------
+# if (mob.tags.Find("ghastly") == true && mob.ghastly_current_time <= 0 && mob.isChasingPlayer() == true):
+#   mob.skills.ghastly();
+execute if entity @s[tag=ghastly, scores={_skills.ghastly.current_time=..0}, predicate=infernal_mobs:chasing_player] at @s if entity @p[gamemode=survival, distance=3..40] run function infernal_mobs:skills/ghastly
+
+#------- If the current timer hasn't finished, decreases its value -------
+# if (mob.tags.Find("ghastly") == true && mob.ghastly_current_time >= 1):
+#   mob.ghastly_current_time--;
+execute if entity @s[tag=ghastly, scores={_skills.ghastly.current_time=1..}, predicate=infernal_mobs:chasing_player] run scoreboard players remove @s _skills.ghastly.current_time 1
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
 #++++++++++++++++++++++ ....others skill below here.... ++++++++++++++++++++++
