@@ -62,6 +62,11 @@ execute if entity @s[tag=fiery] run data modify block ~ ~ ~ Text1 set value '[{"
 #   sign.text1 = sign.text1 + " ghastly";
 execute if entity @s[tag=ghastly] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" ghastly"}]'
 
+#------- If the mob has the "gravity" skill, uses it to build its name -------
+# if (mob.Tags.Find("gravity") == true):
+#   sign.text1 = sign.text1 + " gravity";
+execute if entity @s[tag=gravity] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" gravity"}]'
+
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 

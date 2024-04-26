@@ -17,6 +17,8 @@ scoreboard objectives add _skills.ender.max_time dummy
 scoreboard objectives add _skills.ender.current_time dummy
 scoreboard objectives add _skills.ghastly.max_time dummy
 scoreboard objectives add _skills.ghastly.current_time dummy
+scoreboard objectives add _skills.gravity.max_time dummy
+scoreboard objectives add _skills.gravity.current_time dummy
 
 #------- Creates some constants with fixed values for reseting and math operations. -------
 scoreboard objectives add _const.1 dummy

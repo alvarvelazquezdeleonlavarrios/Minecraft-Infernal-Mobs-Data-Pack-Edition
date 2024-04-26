@@ -111,6 +111,22 @@ execute if entity @s[tag=ghastly, scores={_skills.ghastly.current_time=1..}, pre
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
+#++++++++++++++++++++++++++++++++ Gravity ++++++++++++++++++++++++++++++++
+#------- If the current timer ends, the mob executes the gravity skill -------
+# if (mob.tags.Find("gravity") == true && mob.gravity_current_time <= 0 && mob.isChasingPlayer() == true):
+#   mob.skills.gravity();
+execute if entity @s[tag=gravity, scores={_skills.gravity.current_time=1}, predicate=infernal_mobs:chasing_player] at @s run function infernal_mobs:skills/gravity
+
+#------- If the current timer hasn't finished, decreases its value -------
+# if (mob.tags.Find("gravity") == true && mob.gravity_current_time >= 1 && mob.isChasingPlayer() == true):
+#   mob.gravity_current_time--;
+execute if entity @s[tag=gravity, scores={_skills.gravity.current_time=1..}, predicate=infernal_mobs:chasing_player] run scoreboard players remove @s _skills.gravity.current_time 1
+
+#------- After executing the gravity skill, if the current timer ends, resets the timer to its initial value -------
+# if (mob.tags.Find("gravity") == true && mob.gravity_current_time <= 0 && mob.isChasingPlayer() == true):
+#   mob.gravity_current_time = mob.gravity_max_time;
+execute if entity @s[tag=gravity, scores={_skills.gravity.current_time=..0}, predicate=infernal_mobs:chasing_player] run scoreboard players operation @s _skills.gravity.current_time = @s _skills.gravity.max_time
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 
