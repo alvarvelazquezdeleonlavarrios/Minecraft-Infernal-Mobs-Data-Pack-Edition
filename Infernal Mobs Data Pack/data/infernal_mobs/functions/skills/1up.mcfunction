@@ -15,7 +15,7 @@ execute if score @s _skills.1up.current_health < @s _skills.1up.health_20percent
 #   playsound( "entity.player.levelup" );
 #   particle( "composter" );
 execute if score @s _skills.1up.current_health < @s _skills.1up.health_20percent run playsound entity.player.levelup block @a ~ ~ ~ 1.0 1.0 0.1
-execute if score @s _skills.1up.current_health < @s _skills.1up.health_20percent run particle composter ~ ~0.5 ~ 1.2 1.2 1.2 1 18 normal
+execute if score @s _skills.1up.current_health < @s _skills.1up.health_20percent run particle composter ~ ~0.5 ~ 1.6 1.6 1.6 1 38 normal
 
 #------- Indicates that this mob has already used the 1UP skill -------
 # if (mob.health < mob.health * 0.2):

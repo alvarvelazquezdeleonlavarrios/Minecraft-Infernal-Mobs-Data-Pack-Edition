@@ -129,5 +129,62 @@ execute if entity @s[tag=gravity, scores={_skills.gravity.current_time=..0}, pre
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
+#++++++++++++++++++++++++++++++++ Lifesteal ++++++++++++++++++++++++++++++++
+# The lifesteal skill is executed each time a player gets the "Lifesteal Mob Hit Player" advancement when a mob with the "lifesteal" tag hits the player.
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+#++++++++++++++++++++++++++++++++ Ninja ++++++++++++++++++++++++++++++++
+# The ninja skill is executed each time the mob's current_time matches 0 and the player hits it, getting the "Ninja Player Hit Mob" advancement. This update function just decreases the mob's current_time for the next ninja skill execution.
+
+#------- If the current timer hasn't finished, decreases its value -------
+# if (mob.tags.Find("ninja") == true && mob.ninja_current_time >= 1):
+#   mob.ninja_current_time--;
+execute if entity @s[tag=ninja, scores={_skills.ninja.current_time=1..}] run scoreboard players remove @s _skills.ninja.current_time 1
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+#++++++++++++++++++++++++++++++++ Poisonous ++++++++++++++++++++++++++++++++
+# The poisonous skill is executed each time a player gets the "Poisonous Player Hit Mob" or the "Poisonous Mob Hit Player" advancement when player hits a mob with the "poisonous" tag, or viceversa.
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+#++++++++++++++++++++++++++++++++ Quicksand ++++++++++++++++++++++++++++++++
+#------- If the current timer ends, the mob executes the quicksand skill -------
+# if (mob.tags.Find("quicksand") == true && mob.quicksand_current_time <= 0 && mob.isChasingPlayer() == true):
+#   mob.skills.quicksand();
+execute if entity @s[tag=quicksand, scores={_skills.quicksand.current_time=1}, predicate=infernal_mobs:chasing_player] at @s run function infernal_mobs:skills/quicksand
+
+#------- If the current timer hasn't finished, decreases its value -------
+# if (mob.tags.Find("quicksand") == true && mob.quicksand_current_time >= 1 && mob.isChasingPlayer() == true):
+#   mob.quicksand_current_time--;
+execute if entity @s[tag=quicksand, scores={_skills.quicksand.current_time=1..}, predicate=infernal_mobs:chasing_player] run scoreboard players remove @s _skills.quicksand.current_time 1
+
+#------- After executing the quicksand skill, if the current timer ends, resets the timer to its initial value -------
+# if (mob.tags.Find("quicksand") == true && mob.quicksand_current_time <= 0 && mob.isChasingPlayer() == true):
+#   mob.quicksand_current_time = mob.quicksand_max_time;
+execute if entity @s[tag=quicksand, scores={_skills.quicksand.current_time=..0}, predicate=infernal_mobs:chasing_player] run scoreboard players operation @s _skills.quicksand.current_time = @s _skills.quicksand.max_time
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+#++++++++++++++++++++++++++++++++ Regen ++++++++++++++++++++++++++++++++
+#------- If the current timer ends, the mob executes the regen skill -------
+# if (mob.tags.Find("regen") == true && mob.regen_current_time <= 0):
+#   mob.skills.regen();
+execute if entity @s[tag=regen, scores={_skills.regen.current_time=1}] at @s run function infernal_mobs:skills/regen
+
+#------- If the current timer hasn't finished, decreases its value -------
+# if (mob.tags.Find("regen") == true && mob.regen_current_time >= 1):
+#   mob.regen_current_time--;
+execute if entity @s[tag=regen, scores={_skills.regen.current_time=1..}] run scoreboard players remove @s _skills.regen.current_time 1
+
+#------- After executing the regen skill, if the current timer ends, resets the timer to its initial value -------
+# if (mob.tags.Find("regen") == true && mob.regen_current_time <= 0):
+#   mob.regen_current_time = mob.regen_max_time;
+execute if entity @s[tag=regen, scores={_skills.regen.current_time=..0}] run scoreboard players operation @s _skills.regen.current_time = @s _skills.regen.max_time
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
 
 #++++++++++++++++++++++ ....others skill below here.... ++++++++++++++++++++++
