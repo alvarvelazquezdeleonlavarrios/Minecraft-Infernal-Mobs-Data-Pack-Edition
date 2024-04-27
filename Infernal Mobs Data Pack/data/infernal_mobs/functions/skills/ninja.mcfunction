@@ -10,7 +10,7 @@ particle explosion ~ ~0.5 ~ 3.5 3.5 3.5 1 25 normal @a
 #------- Teleports this mob behind the nearest survival player -------
 # if (player.gamemode == survival && player.distance <= 40):
 #   mob.teleport( player.position, player.rotation );
-execute at @p[gamemode=survival, distance=..40] rotated as @p[gamemode=survival, distance=..40] run tp @s ^ ^ ^-1.25
+execute at @p[gamemode=survival, distance=..40] rotated as @p[gamemode=survival, distance=..40] rotated ~ 0.0 run tp @s ^ ^ ^-1.25
 
 #------- Plays a sound indicating that this mob was finally teleported behind the player -------
 # playsound( "entity.generic.explode" );

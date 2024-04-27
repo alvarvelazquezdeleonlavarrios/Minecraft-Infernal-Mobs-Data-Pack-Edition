@@ -6,8 +6,8 @@ scoreboard objectives add _skills.1up.already_healed dummy
 scoreboard objectives add _skills.1up.health_20percent dummy
 scoreboard objectives add _skills.1up.current_health dummy
 scoreboard objectives add _skills.1up.max_health dummy
-scoreboard objectives add _skills.alchimist.max_time dummy
-scoreboard objectives add _skills.alchimist.current_time dummy
+scoreboard objectives add _skills.alchemist.max_time dummy
+scoreboard objectives add _skills.alchemist.current_time dummy
 scoreboard objectives add _skills.berserk.current_health dummy
 scoreboard objectives add _skills.blastoff.max_time dummy
 scoreboard objectives add _skills.blastoff.current_time dummy

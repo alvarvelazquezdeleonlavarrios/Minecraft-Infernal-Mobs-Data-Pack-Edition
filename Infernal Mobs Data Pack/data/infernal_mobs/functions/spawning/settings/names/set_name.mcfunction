@@ -12,10 +12,10 @@ setblock ~ ~ ~ oak_sign{Text1:'{"text":""}'} replace
 #   sign.text1 = sign.text1 + " 1UP";
 execute if entity @s[tag=1up] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" 1UP"}]'
 
-#------- If the mob has the "alchimist" skill, uses it to build its name -------
-# if (mob.Tags.Find("alchimist") == true):
-#   sign.text1 = sign.text1 + " alchimist";
-execute if entity @s[tag=alchimist] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" Alchimist"}]'
+#------- If the mob has the "alchemist" skill, uses it to build its name -------
+# if (mob.Tags.Find("alchemist") == true):
+#   sign.text1 = sign.text1 + " alchemist";
+execute if entity @s[tag=alchemist] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" Alchemist"}]'
 
 #------- If the mob has the "berserk" skill, uses it to build its name -------
 # if (mob.Tags.Find("berserk") == true):
