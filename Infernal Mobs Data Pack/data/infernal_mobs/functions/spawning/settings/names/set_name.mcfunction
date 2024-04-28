@@ -92,6 +92,11 @@ execute if entity @s[tag=quicksand] run data modify block ~ ~ ~ Text1 set value 
 #   sign.text1 = sign.text1 + " regen";
 execute if entity @s[tag=regen] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" Regen"}]'
 
+#------- If the mob has the "rust" skill, uses it to build its name -------
+# if (mob.Tags.Find("rust") == true):
+#   sign.text1 = sign.text1 + " rust";
+execute if entity @s[tag=rust] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" Rust"}]'
+
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

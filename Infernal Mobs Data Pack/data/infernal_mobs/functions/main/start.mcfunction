@@ -35,6 +35,7 @@ scoreboard objectives add _const.2 dummy
 scoreboard objectives add _const.3 dummy
 scoreboard objectives add _const.4 dummy
 scoreboard objectives add _const.5 dummy
+scoreboard objectives add _const.6 dummy
 scoreboard objectives add _const.8 dummy
 scoreboard objectives add _const.10 dummy
 scoreboard objectives add _const.27 dummy
@@ -54,6 +55,7 @@ scoreboard players set $Constants _const.2 2
 scoreboard players set $Constants _const.3 3
 scoreboard players set $Constants _const.4 4
 scoreboard players set $Constants _const.5 5
+scoreboard players set $Constants _const.6 6
 scoreboard players set $Constants _const.8 8
 scoreboard players set $Constants _const.10 10
 scoreboard players set $Constants _const.27 27

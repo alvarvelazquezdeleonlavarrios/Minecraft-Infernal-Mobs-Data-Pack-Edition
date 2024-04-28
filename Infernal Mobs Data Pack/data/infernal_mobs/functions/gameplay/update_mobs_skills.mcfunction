@@ -185,6 +185,10 @@ execute if entity @s[tag=regen, scores={_skills.regen.current_time=..0}] run sco
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
+#++++++++++++++++++++++++++++++++ Rust ++++++++++++++++++++++++++++++++
+# The rust skill is executed each time a player gets the "rust Player Hit Mob" or the "rust Mob Hit Player" advancement when player hits a mob with the "rust" tag, or viceversa.
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 
 
 #++++++++++++++++++++++ ....others skill below here.... ++++++++++++++++++++++
