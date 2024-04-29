@@ -1,4 +1,4 @@
-#******************* Spawning --> Settings --> Skills --> Add sticky *******************
+#******************* Spawning --> Settings --> Skills --> Add Sticky *******************
 
 
 #------- Adds a new tag named "sticky" for this mob -------

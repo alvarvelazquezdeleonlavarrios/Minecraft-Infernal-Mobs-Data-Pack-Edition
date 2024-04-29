@@ -223,6 +223,44 @@ execute if entity @s[tag=storm, scores={_skills.storm.current_time=1..}, predica
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
+#++++++++++++++++++++++++++++++++ Unyielding ++++++++++++++++++++++++++++++++
+# The unyielding skill doesn't need to update because it's a start skill only.
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-#++++++++++++++++++++++ ....others skill below here.... ++++++++++++++++++++++
+#++++++++++++++++++++++++++++++++ Vengeance ++++++++++++++++++++++++++++++++
+# The vengeance skill is executed each time the mob's current_time matches 0 and the player hits it, getting the "Vengeance Player Hit Mob" advancement. This update function just decreases the mob's current_time for the next vengeance skill execution.
+
+#------- If the current timer hasn't finished, decreases its value -------
+# if (mob.tags.Find("vengeance") == true && mob.vengeance_current_time >= 1):
+#   mob.vengeance_current_time--;
+execute if entity @s[tag=vengeance, scores={_skills.vengeance.current_time=1..}] run scoreboard players remove @s _skills.vengeance.current_time 1
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+#++++++++++++++++++++++++++++++++ Weakness ++++++++++++++++++++++++++++++++
+# The weakness skill is executed each time a player gets the "Weakness Player Hit Mob" or the "Weakness Mob Hit Player" advancement when player hits a mob with the "weakness" tag, or viceversa.
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+#++++++++++++++++++++++++++++++++ Webber ++++++++++++++++++++++++++++++++
+#------- If the current timer ends, the mob executes the webber skill at players position -------
+# if (mob.tags.Find("webber") == true && mob.webber_current_time <= 0):
+#   mob.skills.webber( player.position );
+execute if entity @s[tag=webber, scores={_skills.webber.current_time=1}, predicate=infernal_mobs:chasing_player] at @p[gamemode=survival, distance=..40] run function infernal_mobs:skills/webber
+
+#------- If the current timer hasn't finished, decreases its value -------
+# if (mob.tags.Find("webber") == true && mob.webber_current_time >= 1):
+#   mob.webber_current_time--;
+execute if entity @s[tag=webber, scores={_skills.webber.current_time=1..}, predicate=infernal_mobs:chasing_player] run scoreboard players remove @s _skills.webber.current_time 1
+
+#------- After executing the webber skill, if the current timer ends, resets the timer to its initial value -------
+# if (mob.tags.Find("webber") == true && mob.webber_current_time <= 0):
+#   mob.webber_current_time = mob.webber_max_time;
+execute if entity @s[tag=webber, scores={_skills.webber.current_time=..0}, predicate=infernal_mobs:chasing_player] run scoreboard players operation @s _skills.webber.current_time = @s _skills.webber.max_time
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+#++++++++++++++++++++++++++++++++ Wither ++++++++++++++++++++++++++++++++
+# The wither skill is executed each time a player gets the "Wither Player Hit Mob" or the "Wither Mob Hit Player" advancement when player hits a mob with the "wither" tag, or viceversa.
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

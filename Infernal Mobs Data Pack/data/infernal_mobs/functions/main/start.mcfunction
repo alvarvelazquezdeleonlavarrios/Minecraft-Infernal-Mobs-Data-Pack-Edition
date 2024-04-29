@@ -32,6 +32,10 @@ scoreboard objectives add _skills.sticky.max_time dummy
 scoreboard objectives add _skills.sticky.current_time dummy
 scoreboard objectives add _skills.storm.max_time dummy
 scoreboard objectives add _skills.storm.current_time dummy
+scoreboard objectives add _skills.vengeance.max_time dummy
+scoreboard objectives add _skills.vengeance.current_time dummy
+scoreboard objectives add _skills.webber.max_time dummy
+scoreboard objectives add _skills.webber.current_time dummy
 
 #------- Creates some constants with fixed values for reseting and math operations. -------
 scoreboard objectives add _const.1 dummy

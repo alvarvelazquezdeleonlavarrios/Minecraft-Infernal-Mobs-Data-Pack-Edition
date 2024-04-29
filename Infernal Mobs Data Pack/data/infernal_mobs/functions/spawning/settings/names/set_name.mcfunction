@@ -117,6 +117,30 @@ execute if entity @s[tag=sticky] run data modify block ~ ~ ~ Text1 set value '[{
 #   sign.text1 = sign.text1 + " storm";
 execute if entity @s[tag=storm] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" Storm"}]'
 
+#------- If the mob has the "unyielding" skill, uses it to build its name -------
+# if (mob.Tags.Find("unyielding") == true):
+#   sign.text1 = sign.text1 + " unyielding";
+execute if entity @s[tag=unyielding] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" Unyielding"}]'
+
+#------- If the mob has the "vengeance" skill, uses it to build its name -------
+# if (mob.Tags.Find("vengeance") == true):
+#   sign.text1 = sign.text1 + " vengeance";
+execute if entity @s[tag=vengeance] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" Vengeance"}]'
+
+#------- If the mob has the "weakness" skill, uses it to build its name -------
+# if (mob.Tags.Find("weakness") == true):
+#   sign.text1 = sign.text1 + " weakness";
+execute if entity @s[tag=weakness] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" Weakness"}]'
+
+#------- If the mob has the "webber" skill, uses it to build its name -------
+# if (mob.Tags.Find("webber") == true):
+#   sign.text1 = sign.text1 + " webber";
+execute if entity @s[tag=webber] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" Webber"}]'
+
+#------- If the mob has the "wither" skill, uses it to build its name -------
+# if (mob.Tags.Find("wither") == true):
+#   sign.text1 = sign.text1 + " wither";
+execute if entity @s[tag=wither] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" Wither"}]'
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
