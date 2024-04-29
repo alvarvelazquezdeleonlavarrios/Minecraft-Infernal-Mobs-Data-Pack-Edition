@@ -190,5 +190,39 @@ execute if entity @s[tag=regen, scores={_skills.regen.current_time=..0}] run sco
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
+#++++++++++++++++++++++++++++++++ Sapper ++++++++++++++++++++++++++++++++
+# The sapper skill is executed each time a player gets the "Sapper Player Hit Mob" or the "Sapper Mob Hit Player" advancement when player hits a mob with the "sapper" tag, or viceversa.
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+#++++++++++++++++++++++++++++++++ Sprint ++++++++++++++++++++++++++++++++
+# The sprint skill doesn't need to update because it's a start skill only.
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+#++++++++++++++++++++++++++++++++ Sticky ++++++++++++++++++++++++++++++++
+# The sticky skill is executed each time the mob's current_time matches 0 and the player hits it, getting the "Sticky Player Hit Mob" advancement. This update function just decreases the mob's current_time for the next sticky skill execution.
+
+#------- If the current timer hasn't finished, decreases its value -------
+# if (mob.tags.Find("sticky") == true && mob.sticky_current_time >= 1):
+#   mob.sticky_current_time--;
+execute if entity @s[tag=sticky, scores={_skills.sticky.current_time=1..}] run scoreboard players remove @s _skills.sticky.current_time 1
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+#++++++++++++++++++++++++++++++++ Storm ++++++++++++++++++++++++++++++++
+#------- If the current timer ends, the mob executes the storm skill -------
+# if (mob.tags.Find("storm") == true && mob.storm_current_time <= 0 && mob.isChasingPlayer() == true):
+#   mob.skills.storm();
+execute if entity @s[tag=storm, scores={_skills.storm.current_time=..0}, predicate=infernal_mobs:chasing_player] at @s if entity @p[gamemode=survival, distance=5..40] run function infernal_mobs:skills/storm
+
+#------- If the current timer hasn't finished, decreases its value -------
+# if (mob.tags.Find("storm") == true && mob.storm_current_time >= 1):
+#   mob.storm_current_time--;
+execute if entity @s[tag=storm, scores={_skills.storm.current_time=1..}, predicate=infernal_mobs:chasing_player] run scoreboard players remove @s _skills.storm.current_time 1
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
 
 #++++++++++++++++++++++ ....others skill below here.... ++++++++++++++++++++++

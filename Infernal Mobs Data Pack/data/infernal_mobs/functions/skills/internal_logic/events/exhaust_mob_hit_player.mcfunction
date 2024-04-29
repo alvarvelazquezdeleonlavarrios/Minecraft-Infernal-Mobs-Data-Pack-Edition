@@ -1,10 +1,10 @@
 #******************* Skills --> Internal Logic --> Events --> Exhaust Mob Hit Player **********************************
 
 
-#------- If the player is in survival and doesn't have the hunger effect yet, adds it during 10 seconds. -------
-# if (player.gamemode == survival && player.effects.Find("Hunger") == false):
-#   player.effects.Add(hunger, 10s, 8);
-execute if entity @s[gamemode=survival, nbt=!{ActiveEffects:[{Id:17}]}] run effect give @s hunger 10 8 true
+#------- If the player is in survival and doesn't have the mining fatigue effect yet, adds it during 8 seconds. -------
+# if (player.gamemode == survival && player.effects.Find("Mining Fatigue") == false):
+#   player.effects.Add(Mining Fatigue, 8s, 3);
+execute if entity @s[gamemode=survival, nbt=!{ActiveEffects:[{Id:3}]}] run effect give @s mining_fatigue 8 3 true
 
 #------- Removes the achieved advancement, being able to execute the skill many times later -------
 # player.advancements.Remove( "Exhaust Mob Hit Player" );

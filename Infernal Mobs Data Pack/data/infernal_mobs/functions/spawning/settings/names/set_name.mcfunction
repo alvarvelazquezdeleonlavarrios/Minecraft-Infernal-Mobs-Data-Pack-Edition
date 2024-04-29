@@ -97,6 +97,25 @@ execute if entity @s[tag=regen] run data modify block ~ ~ ~ Text1 set value '[{"
 #   sign.text1 = sign.text1 + " rust";
 execute if entity @s[tag=rust] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" Rust"}]'
 
+#------- If the mob has the "sapper" skill, uses it to build its name -------
+# if (mob.Tags.Find("sapper") == true):
+#   sign.text1 = sign.text1 + " sapper";
+execute if entity @s[tag=sapper] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" Sapper"}]'
+
+#------- If the mob has the "sprint" skill, uses it to build its name -------
+# if (mob.Tags.Find("sprint") == true):
+#   sign.text1 = sign.text1 + " sprint";
+execute if entity @s[tag=sprint] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" Sprint"}]'
+
+#------- If the mob has the "sticky" skill, uses it to build its name -------
+# if (mob.Tags.Find("sticky") == true):
+#   sign.text1 = sign.text1 + " sticky";
+execute if entity @s[tag=sticky] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" Sticky"}]'
+
+#------- If the mob has the "storm" skill, uses it to build its name -------
+# if (mob.Tags.Find("storm") == true):
+#   sign.text1 = sign.text1 + " storm";
+execute if entity @s[tag=storm] run data modify block ~ ~ ~ Text1 set value '[{"nbt":"Text1","block":"~ ~ ~","interpret":true},{"text":" Storm"}]'
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
