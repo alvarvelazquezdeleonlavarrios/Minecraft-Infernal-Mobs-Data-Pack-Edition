@@ -1,4 +1,4 @@
-#*********************** Zombie --> Summon Blastoff *******************
+#*********************** Summon By Skill --> Blastoff *******************
 
 
 #------- Summons a new Rare zombie -------

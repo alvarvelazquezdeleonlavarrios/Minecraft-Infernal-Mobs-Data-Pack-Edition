@@ -1,4 +1,4 @@
-#*********************** Zombie --> Summon Rust *******************
+#*********************** Summon By Skill --> Rust *******************
 
 
 #------- Summons a new Rare zombie -------

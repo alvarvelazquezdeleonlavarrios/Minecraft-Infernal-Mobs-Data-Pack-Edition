@@ -1,4 +1,4 @@
-#*********************** Zombie --> Summon Alchemist *******************
+#*********************** Summon By Skill --> Alchemist *******************
 
 
 #------- Summons a new Rare zombie -------

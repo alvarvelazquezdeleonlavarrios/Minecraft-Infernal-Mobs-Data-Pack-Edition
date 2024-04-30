@@ -1,4 +1,4 @@
-#*********************** Zombie --> Summon Gravity *******************
+#*********************** Summon By Skill --> Gravity *******************
 
 
 #------- Summons a new Rare zombie -------

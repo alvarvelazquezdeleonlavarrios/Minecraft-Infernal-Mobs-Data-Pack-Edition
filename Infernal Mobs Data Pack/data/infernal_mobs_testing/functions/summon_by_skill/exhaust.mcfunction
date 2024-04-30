@@ -1,4 +1,4 @@
-#*********************** Zombie --> Summon Exhaust *******************
+#*********************** Summon By Skill --> Exhaust *******************
 
 
 #------- Summons a new Rare zombie -------

@@ -1,4 +1,4 @@
-#*********************** Zombie --> Summon Sticky *******************
+#*********************** Summon By Skill --> Sticky *******************
 
 
 #------- Summons a new Rare zombie -------

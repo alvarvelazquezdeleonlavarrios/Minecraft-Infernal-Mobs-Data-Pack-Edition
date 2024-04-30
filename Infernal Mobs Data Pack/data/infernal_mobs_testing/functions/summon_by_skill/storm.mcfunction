@@ -1,4 +1,4 @@
-#*********************** Zombie --> Summon Storm *******************
+#*********************** Summon By Skill --> Storm *******************
 
 
 #------- Summons a new Rare zombie -------

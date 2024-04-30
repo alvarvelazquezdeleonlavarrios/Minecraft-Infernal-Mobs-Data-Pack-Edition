@@ -1,4 +1,4 @@
-#*********************** Zombie --> Summon Vengeance *******************
+#*********************** Summon By Skill --> Vengeance *******************
 
 
 #------- Summons a new Rare zombie -------

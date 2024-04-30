@@ -1,4 +1,4 @@
-#*********************** Zombie --> Summon Sprint *******************
+#*********************** Summon By Skill --> Sprint *******************
 
 
 #------- Summons a new Rare zombie -------

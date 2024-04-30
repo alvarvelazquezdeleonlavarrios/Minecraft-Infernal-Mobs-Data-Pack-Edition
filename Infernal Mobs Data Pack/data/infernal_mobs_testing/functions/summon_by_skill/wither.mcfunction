@@ -1,4 +1,4 @@
-#*********************** Zombie --> Summon Wither *******************
+#*********************** Summon By Skill --> Wither *******************
 
 
 #------- Summons a new Rare zombie -------

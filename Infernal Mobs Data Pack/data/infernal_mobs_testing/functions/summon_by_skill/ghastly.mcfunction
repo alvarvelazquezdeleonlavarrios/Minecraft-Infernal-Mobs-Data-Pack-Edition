@@ -1,4 +1,4 @@
-#*********************** Zombie --> Summon Ghastly *******************
+#*********************** Summon By Skill --> Ghastly *******************
 
 
 #------- Summons a new Rare zombie -------

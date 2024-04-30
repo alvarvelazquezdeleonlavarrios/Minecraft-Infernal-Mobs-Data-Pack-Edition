@@ -1,4 +1,4 @@
-#*********************** Zombie --> Summon Ender *******************
+#*********************** Summon By Skill --> Ender *******************
 
 
 #------- Summons a new Rare zombie -------

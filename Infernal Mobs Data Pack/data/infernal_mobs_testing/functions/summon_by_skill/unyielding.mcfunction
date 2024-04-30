@@ -1,4 +1,4 @@
-#*********************** Zombie --> Summon Unyielding *******************
+#*********************** Summon By Skill --> Unyielding *******************
 
 
 #------- Summons a new Rare zombie -------

@@ -1,4 +1,4 @@
-#*********************** Zombie --> Summon Weakness *******************
+#*********************** Summon By Skill --> Weakness *******************
 
 
 #------- Summons a new Rare zombie -------

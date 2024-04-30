@@ -1,4 +1,4 @@
-#*********************** Zombie --> Summon Sapper *******************
+#*********************** Summon By Skill --> Sapper *******************
 
 
 #------- Summons a new Rare zombie -------

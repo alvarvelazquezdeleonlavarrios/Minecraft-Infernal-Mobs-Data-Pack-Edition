@@ -1,4 +1,4 @@
-#*********************** Zombie --> Summon Quicksand *******************
+#*********************** Summon By Skill --> Quicksand *******************
 
 
 #------- Summons a new Rare zombie -------

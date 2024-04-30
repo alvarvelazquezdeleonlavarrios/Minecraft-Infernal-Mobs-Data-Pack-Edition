@@ -1,4 +1,4 @@
-#*********************** Zombie --> Summon Fiery *******************
+#*********************** Summon By Skill --> Fiery *******************
 
 
 #------- Summons a new Rare zombie -------

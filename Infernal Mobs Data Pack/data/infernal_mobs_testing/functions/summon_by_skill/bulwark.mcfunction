@@ -1,4 +1,4 @@
-#*********************** Zombie --> Summon Bulwark *******************
+#*********************** Summon By Skill --> Bulwark *******************
 
 
 #------- Summons a new Rare zombie -------

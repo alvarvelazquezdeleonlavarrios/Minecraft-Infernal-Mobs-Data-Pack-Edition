@@ -1,4 +1,4 @@
-#*********************** Zombie --> Summon Cloacking *******************
+#*********************** Summon By Skill --> Cloacking *******************
 
 
 #------- Summons a new Rare zombie -------

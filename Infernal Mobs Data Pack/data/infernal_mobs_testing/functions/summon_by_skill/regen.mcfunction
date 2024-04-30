@@ -1,4 +1,4 @@
-#*********************** Zombie --> Summon Regen *******************
+#*********************** Summon By Skill --> Regen *******************
 
 
 #------- Summons a new Rare zombie -------

@@ -1,4 +1,4 @@
-#*********************** Zombie --> Summon Lifesteal *******************
+#*********************** Summon By Skill --> Lifesteal *******************
 
 
 #------- Summons a new Rare zombie -------

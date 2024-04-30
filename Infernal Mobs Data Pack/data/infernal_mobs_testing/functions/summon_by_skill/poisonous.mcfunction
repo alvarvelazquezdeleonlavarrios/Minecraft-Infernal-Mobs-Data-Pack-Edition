@@ -1,4 +1,4 @@
-#*********************** Zombie --> Summon Poisonous *******************
+#*********************** Summon By Skill --> Poisonous *******************
 
 
 #------- Summons a new Rare zombie -------

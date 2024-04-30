@@ -1,4 +1,4 @@
-#*********************** Zombie --> Summon Ninja *******************
+#*********************** Summon By Skill --> Ninja *******************
 
 
 #------- Summons a new Rare zombie -------

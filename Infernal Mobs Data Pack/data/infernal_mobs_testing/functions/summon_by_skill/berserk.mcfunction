@@ -1,4 +1,4 @@
-#*********************** Zombie --> Summon Berserk *******************
+#*********************** Summon By Skill --> Berserk *******************
 
 
 #------- Summons a new Rare zombie -------

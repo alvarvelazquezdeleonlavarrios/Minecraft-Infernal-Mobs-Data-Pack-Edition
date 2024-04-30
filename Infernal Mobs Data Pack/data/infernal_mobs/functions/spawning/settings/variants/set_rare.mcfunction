@@ -47,10 +47,8 @@ execute store result entity @s Health float 1 run scoreboard players get @s _tmp
 
 
 #++++++++++++++++++ Sets Mob's default Attack Damage (Rare Variant) +++++++++++++++++++++++
-#------- For hostile mobs available since version 1.0.x and before version 1.16.x -------
 execute if entity @s[type=zombie] run data merge entity @s {Attributes:[{Name:"minecraft:generic.attack_damage",Base:3}]}
 
-#------- For hostile mobs available since version 1.16.x (otherwise, comment the code lines below) -------
 
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

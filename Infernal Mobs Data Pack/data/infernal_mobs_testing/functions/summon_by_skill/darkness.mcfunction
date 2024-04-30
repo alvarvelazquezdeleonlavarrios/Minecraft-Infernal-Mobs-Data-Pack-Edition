@@ -1,4 +1,4 @@
-#*********************** Zombie --> Summon Darkness *******************
+#*********************** Summon By Skill --> Darkness *******************
 
 
 #------- Summons a new Rare zombie -------

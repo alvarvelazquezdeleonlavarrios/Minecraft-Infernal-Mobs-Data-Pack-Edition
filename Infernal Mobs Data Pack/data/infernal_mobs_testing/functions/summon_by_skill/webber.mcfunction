@@ -1,4 +1,4 @@
-#*********************** Zombie --> Summon Webber *******************
+#*********************** Summon By Skill --> Webber *******************
 
 
 #------- Summons a new Rare zombie -------
