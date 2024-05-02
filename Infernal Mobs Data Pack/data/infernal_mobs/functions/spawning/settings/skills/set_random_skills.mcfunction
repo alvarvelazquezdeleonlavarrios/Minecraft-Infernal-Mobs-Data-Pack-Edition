@@ -4,7 +4,7 @@
 #------- Defines the next skill that this mob will be able to use during the game -------
 # mob.tmp_current_skill = Random.Range(0,26);
 summon area_effect_cloud ~ ~ ~ {Tags:["random_uuid","random_skills"]}
-execute store result score @s _tmp.current_skill run data get entity @e[type=area_effect_cloud,tag=random_uuid,limit=1] UUID[0] 1
+execute store result score @s _tmp.current_skill run data get entity @e[type=area_effect_cloud, tag=random_uuid, tag=random_skills, limit=1] UUID[0] 1
 scoreboard players operation @s _tmp.current_skill %= $Constants _const.27
 kill @e[type=area_effect_cloud, tag=random_uuid, tag=random_skills, limit=1, sort=nearest]
 
@@ -147,7 +147,7 @@ execute if score @s _tmp.current_skill matches 26 if score @s _tmp.skills_count 
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-#------- Recursively, adds the left skills to this mob -------
+#------- Recursively, adds the left skills for this mob -------
 # if (mob.tmp_skills_count >= 1):
 #     mob.SetRandomSkills();
 execute if score @s _tmp.skills_count matches 1.. run function infernal_mobs:spawning/settings/skills/set_random_skills

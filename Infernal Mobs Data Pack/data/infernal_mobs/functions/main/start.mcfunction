@@ -112,11 +112,32 @@ bossbar add _healthbar.27 ""
 bossbar add _healthbar.28 ""
 bossbar add _healthbar.29 ""
 bossbar add _healthbar.30 ""
+bossbar add _healthbar.31 ""
+bossbar add _healthbar.32 ""
+bossbar add _healthbar.33 ""
+bossbar add _healthbar.34 ""
+bossbar add _healthbar.35 ""
+bossbar add _healthbar.36 ""
+bossbar add _healthbar.37 ""
+bossbar add _healthbar.38 ""
+bossbar add _healthbar.39 ""
+bossbar add _healthbar.40 ""
+bossbar add _healthbar.41 ""
+bossbar add _healthbar.42 ""
+bossbar add _healthbar.43 ""
+bossbar add _healthbar.44 ""
+bossbar add _healthbar.45 ""
+bossbar add _healthbar.46 ""
+bossbar add _healthbar.47 ""
+bossbar add _healthbar.48 ""
+bossbar add _healthbar.49 ""
+bossbar add _healthbar.50 ""
 
 
 #------- Prints a message in the chat when this Data Pack is loaded -------
 tellraw @a {"text": "***************************************************************************","color":"#1A3AA3"}
 tellraw @a {"text": "--------------- Infernal Mobs Data Pack -------------"}
-tellraw @a {"text": "-------------------- Version: 1.0 -------------------"}
+tellraw @a {"text": "--------------- For Java Edition 1.19.x -------------"}
+tellraw @a {"text": "----------------------- v.1.0 --------------------"}
 tellraw @a {"text": "--- Developed by: Alvar Velázquez de León Lavarrios ---","color":"#B8B8B8"}
 tellraw @a {"text": "***************************************************************************","color":"#1A3AA3"}

@@ -146,20 +146,32 @@ execute if entity @s[tag=wither] run data modify block ~ ~ ~ Text1 set value '[{
 
 
 #+++++++++++++++++++++++++++++++++++++ Variant Mob Name ++++++++++++++++++++++++++++++++++++++
+#------- Sets random suffix for this mob's name -------
+# sign.text2 = setRandomSuffix();
+function infernal_mobs:spawning/settings/names/set_random_suffix
+
+#------- Concatenates the mob's original name with the suffix -------
+# sign.text2 = mob.name + sign.text2;
+data modify block ~ ~ ~ Text2 set value '[{"selector":"@e[tag=rare,limit=1,sort=nearest]","interpret":true},{"nbt":"Text2","block":"~ ~ ~","interpret":true}]'
+
+#------- Sets random prefix for this mob's name -------
+# sign.text2 = setRandomPrefix() + sign.text2;
+
+
 #------- Adds the final text for a rare mob -------
 # if (mob.Tags.Find("rare")):
-#   sign.text1 = "Rare " + mob.name + sign.text1;
-execute if entity @s[tag=rare] run data modify block ~ ~ ~ Text1 set value '[{"text":"Rare ","color":"#4FE2FF"},{"selector":"@e[tag=rare,limit=1,sort=nearest]","interpret":true,"color":"#4FE2FF"},{"nbt":"Text1","block":"~ ~ ~","interpret":true,"color":"#F5F5F5"}]'
+#   sign.text1 = "Rare " + sign.text2 + sign.text1;
+execute if entity @s[tag=rare] run data modify block ~ ~ ~ Text1 set value '[{"text":"Rare ","color":"#4FE2FF"},{"nbt":"Text2","block":"~ ~ ~","interpret":true,"color":"#4FE2FF"},{"nbt":"Text1","block":"~ ~ ~","interpret":true,"color":"#F5F5F5"}]'
 
 #------- Adds the final text for a ultra mob -------
 # if (mob.Tags.Find("ultra")):
-#   sign.text1 = "Ultra " + mob.name + sign.text1;
-execute if entity @s[tag=ultra] run data modify block ~ ~ ~ Text1 set value '[{"text":"Ultra ","color":"#FFFF4A"},{"selector":"@e[tag=ultra,limit=1,sort=nearest]","interpret":true,"color":"#FFFF4A"},{"nbt":"Text1","block":"~ ~ ~","interpret":true,"color":"#F5F5F5"}]'
+#   sign.text1 = "Ultra " + sign.text2 + sign.text1;
+execute if entity @s[tag=ultra] run data modify block ~ ~ ~ Text1 set value '[{"text":"Ultra ","color":"#FFFF4A"},{"nbt":"Text2","block":"~ ~ ~","interpret":true,"color":"#FFFF4A"},{"nbt":"Text1","block":"~ ~ ~","interpret":true,"color":"#F5F5F5"}]'
 
 #------- Adds the final text for a infernal mob -------
 # if (mob.Tags.Find("infernal")):
-#   sign.text1 = "Infernal " + mob.name + sign.text1;
-execute if entity @s[tag=infernal] run data modify block ~ ~ ~ Text1 set value '[{"text":"Infernal ","color":"#FF913D"},{"selector":"@e[tag=infernal,limit=1,sort=nearest]","interpret":true,"color":"#FF913D"},{"nbt":"Text1","block":"~ ~ ~","interpret":true,"color":"#F5F5F5"}]'
+#   sign.text1 = "Infernal " + sign.text2 + sign.text1;
+execute if entity @s[tag=infernal] run data modify block ~ ~ ~ Text1 set value '[{"text":"Infernal ","color":"#FF913D"},{"nbt":"Text2","block":"~ ~ ~","interpret":true,"color":"#FF913D"},{"nbt":"Text1","block":"~ ~ ~","interpret":true,"color":"#F5F5F5"}]'
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 

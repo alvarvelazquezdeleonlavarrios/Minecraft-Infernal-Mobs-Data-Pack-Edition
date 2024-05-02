@@ -55,6 +55,8 @@ scoreboard players add $Healthbars _healthbar.current_search 1
 execute if score $Healthbars _healthbar.already_found matches 0 unless entity @e[scores={_healthbar.current_id=10}] if score $Healthbars _healthbar.current_search matches 10 run function infernal_mobs:spawning/settings/healthbars/set_healthbar/10
 scoreboard players add $Healthbars _healthbar.current_search 1
 
+
+
 #------- If the healthbar #11 is available, sets it to this mob -------
 execute if score $Healthbars _healthbar.already_found matches 0 unless entity @e[scores={_healthbar.current_id=11}] if score $Healthbars _healthbar.current_search matches 11 run function infernal_mobs:spawning/settings/healthbars/set_healthbar/11
 scoreboard players add $Healthbars _healthbar.current_search 1
@@ -95,6 +97,8 @@ scoreboard players add $Healthbars _healthbar.current_search 1
 execute if score $Healthbars _healthbar.already_found matches 0 unless entity @e[scores={_healthbar.current_id=20}] if score $Healthbars _healthbar.current_search matches 20 run function infernal_mobs:spawning/settings/healthbars/set_healthbar/20
 scoreboard players add $Healthbars _healthbar.current_search 1
 
+
+
 #------- If the healthbar #21 is available, sets it to this mob -------
 execute if score $Healthbars _healthbar.already_found matches 0 unless entity @e[scores={_healthbar.current_id=21}] if score $Healthbars _healthbar.current_search matches 21 run function infernal_mobs:spawning/settings/healthbars/set_healthbar/21
 scoreboard players add $Healthbars _healthbar.current_search 1
@@ -133,4 +137,88 @@ scoreboard players add $Healthbars _healthbar.current_search 1
 
 #------- If the healthbar #30 is available, sets it to this mob -------
 execute if score $Healthbars _healthbar.already_found matches 0 unless entity @e[scores={_healthbar.current_id=30}] if score $Healthbars _healthbar.current_search matches 30 run function infernal_mobs:spawning/settings/healthbars/set_healthbar/30
+scoreboard players add $Healthbars _healthbar.current_search 1
+
+
+
+#------- If the healthbar #31 is available, sets it to this mob -------
+execute if score $Healthbars _healthbar.already_found matches 0 unless entity @e[scores={_healthbar.current_id=31}] if score $Healthbars _healthbar.current_search matches 31 run function infernal_mobs:spawning/settings/healthbars/set_healthbar/31
+scoreboard players add $Healthbars _healthbar.current_search 1
+
+#------- If the healthbar #32 is available, sets it to this mob -------
+execute if score $Healthbars _healthbar.already_found matches 0 unless entity @e[scores={_healthbar.current_id=32}] if score $Healthbars _healthbar.current_search matches 32 run function infernal_mobs:spawning/settings/healthbars/set_healthbar/32
+scoreboard players add $Healthbars _healthbar.current_search 1
+
+#------- If the healthbar #33 is available, sets it to this mob -------
+execute if score $Healthbars _healthbar.already_found matches 0 unless entity @e[scores={_healthbar.current_id=33}] if score $Healthbars _healthbar.current_search matches 33 run function infernal_mobs:spawning/settings/healthbars/set_healthbar/33
+scoreboard players add $Healthbars _healthbar.current_search 1
+
+#------- If the healthbar #34 is available, sets it to this mob -------
+execute if score $Healthbars _healthbar.already_found matches 0 unless entity @e[scores={_healthbar.current_id=34}] if score $Healthbars _healthbar.current_search matches 34 run function infernal_mobs:spawning/settings/healthbars/set_healthbar/34
+scoreboard players add $Healthbars _healthbar.current_search 1
+
+#------- If the healthbar #35 is available, sets it to this mob -------
+execute if score $Healthbars _healthbar.already_found matches 0 unless entity @e[scores={_healthbar.current_id=35}] if score $Healthbars _healthbar.current_search matches 35 run function infernal_mobs:spawning/settings/healthbars/set_healthbar/35
+scoreboard players add $Healthbars _healthbar.current_search 1
+
+#------- If the healthbar #36 is available, sets it to this mob -------
+execute if score $Healthbars _healthbar.already_found matches 0 unless entity @e[scores={_healthbar.current_id=36}] if score $Healthbars _healthbar.current_search matches 36 run function infernal_mobs:spawning/settings/healthbars/set_healthbar/36
+scoreboard players add $Healthbars _healthbar.current_search 1
+
+#------- If the healthbar #37 is available, sets it to this mob -------
+execute if score $Healthbars _healthbar.already_found matches 0 unless entity @e[scores={_healthbar.current_id=37}] if score $Healthbars _healthbar.current_search matches 37 run function infernal_mobs:spawning/settings/healthbars/set_healthbar/37
+scoreboard players add $Healthbars _healthbar.current_search 1
+
+#------- If the healthbar #38 is available, sets it to this mob -------
+execute if score $Healthbars _healthbar.already_found matches 0 unless entity @e[scores={_healthbar.current_id=38}] if score $Healthbars _healthbar.current_search matches 38 run function infernal_mobs:spawning/settings/healthbars/set_healthbar/38
+scoreboard players add $Healthbars _healthbar.current_search 1
+
+#------- If the healthbar #39 is available, sets it to this mob -------
+execute if score $Healthbars _healthbar.already_found matches 0 unless entity @e[scores={_healthbar.current_id=39}] if score $Healthbars _healthbar.current_search matches 39 run function infernal_mobs:spawning/settings/healthbars/set_healthbar/39
+scoreboard players add $Healthbars _healthbar.current_search 1
+
+#------- If the healthbar #40 is available, sets it to this mob -------
+execute if score $Healthbars _healthbar.already_found matches 0 unless entity @e[scores={_healthbar.current_id=40}] if score $Healthbars _healthbar.current_search matches 40 run function infernal_mobs:spawning/settings/healthbars/set_healthbar/40
+scoreboard players add $Healthbars _healthbar.current_search 1
+
+
+
+#------- If the healthbar #41 is available, sets it to this mob -------
+execute if score $Healthbars _healthbar.already_found matches 0 unless entity @e[scores={_healthbar.current_id=41}] if score $Healthbars _healthbar.current_search matches 41 run function infernal_mobs:spawning/settings/healthbars/set_healthbar/41
+scoreboard players add $Healthbars _healthbar.current_search 1
+
+#------- If the healthbar #42 is available, sets it to this mob -------
+execute if score $Healthbars _healthbar.already_found matches 0 unless entity @e[scores={_healthbar.current_id=42}] if score $Healthbars _healthbar.current_search matches 42 run function infernal_mobs:spawning/settings/healthbars/set_healthbar/42
+scoreboard players add $Healthbars _healthbar.current_search 1
+
+#------- If the healthbar #43 is available, sets it to this mob -------
+execute if score $Healthbars _healthbar.already_found matches 0 unless entity @e[scores={_healthbar.current_id=43}] if score $Healthbars _healthbar.current_search matches 43 run function infernal_mobs:spawning/settings/healthbars/set_healthbar/43
+scoreboard players add $Healthbars _healthbar.current_search 1
+
+#------- If the healthbar #44 is available, sets it to this mob -------
+execute if score $Healthbars _healthbar.already_found matches 0 unless entity @e[scores={_healthbar.current_id=44}] if score $Healthbars _healthbar.current_search matches 44 run function infernal_mobs:spawning/settings/healthbars/set_healthbar/44
+scoreboard players add $Healthbars _healthbar.current_search 1
+
+#------- If the healthbar #45 is available, sets it to this mob -------
+execute if score $Healthbars _healthbar.already_found matches 0 unless entity @e[scores={_healthbar.current_id=45}] if score $Healthbars _healthbar.current_search matches 45 run function infernal_mobs:spawning/settings/healthbars/set_healthbar/45
+scoreboard players add $Healthbars _healthbar.current_search 1
+
+#------- If the healthbar #46 is available, sets it to this mob -------
+execute if score $Healthbars _healthbar.already_found matches 0 unless entity @e[scores={_healthbar.current_id=46}] if score $Healthbars _healthbar.current_search matches 46 run function infernal_mobs:spawning/settings/healthbars/set_healthbar/46
+scoreboard players add $Healthbars _healthbar.current_search 1
+
+#------- If the healthbar #47 is available, sets it to this mob -------
+execute if score $Healthbars _healthbar.already_found matches 0 unless entity @e[scores={_healthbar.current_id=47}] if score $Healthbars _healthbar.current_search matches 47 run function infernal_mobs:spawning/settings/healthbars/set_healthbar/47
+scoreboard players add $Healthbars _healthbar.current_search 1
+
+#------- If the healthbar #48 is available, sets it to this mob -------
+execute if score $Healthbars _healthbar.already_found matches 0 unless entity @e[scores={_healthbar.current_id=48}] if score $Healthbars _healthbar.current_search matches 48 run function infernal_mobs:spawning/settings/healthbars/set_healthbar/48
+scoreboard players add $Healthbars _healthbar.current_search 1
+
+#------- If the healthbar #49 is available, sets it to this mob -------
+execute if score $Healthbars _healthbar.already_found matches 0 unless entity @e[scores={_healthbar.current_id=49}] if score $Healthbars _healthbar.current_search matches 49 run function infernal_mobs:spawning/settings/healthbars/set_healthbar/49
+scoreboard players add $Healthbars _healthbar.current_search 1
+
+#------- If the healthbar #50 is available, sets it to this mob -------
+execute if score $Healthbars _healthbar.already_found matches 0 unless entity @e[scores={_healthbar.current_id=50}] if score $Healthbars _healthbar.current_search matches 50 run function infernal_mobs:spawning/settings/healthbars/set_healthbar/50
 scoreboard players add $Healthbars _healthbar.current_search 1
