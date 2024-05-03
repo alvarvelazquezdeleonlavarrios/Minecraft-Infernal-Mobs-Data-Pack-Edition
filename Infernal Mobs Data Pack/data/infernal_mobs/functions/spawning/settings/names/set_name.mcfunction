@@ -152,11 +152,11 @@ function infernal_mobs:spawning/settings/names/set_random_suffix
 
 #------- Concatenates the mob's original name with the suffix -------
 # sign.text2 = mob.name + sign.text2;
-data modify block ~ ~ ~ Text2 set value '[{"selector":"@e[tag=rare,limit=1,sort=nearest]","interpret":true},{"nbt":"Text2","block":"~ ~ ~","interpret":true}]'
+data modify block ~ ~ ~ Text2 set value '[{"selector":"@e[tag=Infernal_Mob,limit=1,sort=nearest]","interpret":true},{"nbt":"Text2","block":"~ ~ ~","interpret":true}]'
 
 #------- Sets random prefix for this mob's name -------
 # sign.text2 = setRandomPrefix() + sign.text2;
-
+function infernal_mobs:spawning/settings/names/set_random_prefix
 
 #------- Adds the final text for a rare mob -------
 # if (mob.Tags.Find("rare")):
