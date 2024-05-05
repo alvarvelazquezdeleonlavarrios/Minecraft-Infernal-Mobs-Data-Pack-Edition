@@ -17,7 +17,7 @@ scoreboard players set @s _tmp.current_skill 0
 # mob.setInfernal();
 function infernal_mobs:spawning/settings/variants/set_infernal
 
-#------- Sets a random number of skills that this mob will have, in a range between 5 and 8 -------
+#------- Sets a random number of skills that this mob will have, in a range between 9 and 12 -------
 # mob.tmp_skills_count = Random.Range(0,3) + 9;     // Range --> [9,12];
 summon area_effect_cloud ~ ~ ~ {Tags:["random_uuid","spawn_infernal"]}
 execute store result score @s _tmp.skills_count run data get entity @e[type=area_effect_cloud, tag=random_uuid, tag=spawn_infernal, limit=1] UUID[0] 1

@@ -8,10 +8,10 @@ scoreboard objectives add _tmp.random_suffix.unyielding dummy
 scoreboard players set @s _tmp.random_suffix.unyielding -1
 
 #------- Defines the random suffix for the unyielding skill -------
-# mob.tmp_random_suffix_unyielding = Random.Range(0,1);
+# mob.tmp_random_suffix_unyielding = Random.Range(0,2);
 summon area_effect_cloud ~ ~ ~ {Tags:["random_uuid","random_suffix_unyielding"]}
 execute store result score @s _tmp.random_suffix.unyielding run data get entity @e[type=area_effect_cloud, tag=random_uuid, tag=random_suffix_unyielding, limit=1] UUID[0] 1
-scoreboard players operation @s _tmp.random_suffix.unyielding %= $Constants _const.2
+scoreboard players operation @s _tmp.random_suffix.unyielding %= $Constants _const.3
 kill @e[type=area_effect_cloud, tag=random_uuid, tag=random_suffix_unyielding, limit=1, sort=nearest]
 
 
@@ -20,8 +20,10 @@ kill @e[type=area_effect_cloud, tag=random_uuid, tag=random_suffix_unyielding, l
 # switch (mob.tmp_random_suffix_unyielding):
 #   case 0:     sign.text2 = " ofHeavyMetal";   break;
 #   case 1:     sign.text2 = " theAnvilOne";     break;
+#   case 2:     sign.text2 = " lordOfTanks";     break;
 execute if score @s _tmp.random_suffix.unyielding matches 0 run data modify block ~ ~ ~ Text2 set value '{"text":" ofHeavyMetal","interpret":true}'
 execute if score @s _tmp.random_suffix.unyielding matches 1 run data modify block ~ ~ ~ Text2 set value '{"text":" theAnvilOne","interpret":true}'
+execute if score @s _tmp.random_suffix.unyielding matches 2 run data modify block ~ ~ ~ Text2 set value '{"text":" lordOfTanks","interpret":true}'
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 

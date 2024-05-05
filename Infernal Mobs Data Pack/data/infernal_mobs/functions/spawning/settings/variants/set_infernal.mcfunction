@@ -46,13 +46,6 @@ execute store result entity @s Health float 1 run scoreboard players get @s _tmp
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-#++++++++++++++++++ Sets Mob's default Attack Damage (Infernal Variant) +++++++++++++++++++++++
-execute if entity @s[type=zombie] run data merge entity @s {Attributes:[{Name:"minecraft:generic.attack_damage",Base:5}]}
-
-
-#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
 #----- Removes the temporary variables -------
 # deleteVariable( tmp_new_health );
 # deleteVariable( tmp_health_multiplier );

@@ -9,6 +9,7 @@ scoreboard objectives add _skills.1up.max_health dummy
 scoreboard objectives add _skills.alchemist.max_time dummy
 scoreboard objectives add _skills.alchemist.current_time dummy
 scoreboard objectives add _skills.berserk.current_health dummy
+scoreboard objectives add _skills.berserk.current_attack_damage dummy
 scoreboard objectives add _skills.blastoff.max_time dummy
 scoreboard objectives add _skills.blastoff.current_time dummy
 scoreboard objectives add _skills.cloacking.max_time dummy
@@ -52,11 +53,19 @@ scoreboard objectives add _const.16 dummy
 scoreboard objectives add _const.24 dummy
 scoreboard objectives add _const.27 dummy
 scoreboard objectives add _const.100 dummy
+scoreboard objectives add _const.10000 dummy
 
 #------- Creates the game variables for the logic that sets the healthbars to the mobs. -------
 scoreboard objectives add _healthbar.current_search dummy
 scoreboard objectives add _healthbar.already_found dummy
 scoreboard objectives add _healthbar.current_id dummy
+
+#------- Creates the game variables for the logic that spawns naturally the infernal mobs in the world. -------
+scoreboard objectives add _natural_spawning.current_wait_time dummy
+scoreboard objectives add _natural_spawning.variant_chance dummy
+
+#------- Creates a variable to read the game's dificulty every moment. -------
+scoreboard objectives add _game_difficulty.current_value dummy
 
 #------- Stores and updates automatically the health for each entity (including players) during the game. -------
 scoreboard objectives add _health_points health
@@ -76,10 +85,15 @@ scoreboard players set $Constants _const.16 16
 scoreboard players set $Constants _const.24 24
 scoreboard players set $Constants _const.27 27
 scoreboard players set $Constants _const.100 100
+scoreboard players set $Constants _const.10000 10000
 
 #------- Creates a fake player named "$Healthbars" to do the bossbar assignments to the current mobs in the game. -------
 scoreboard players set $Healthbars _healthbar.current_search 1
 scoreboard players set $Healthbars _healthbar.already_found 0
+
+#------- Creates a fake player named "$GameManager" to do the overall automatic updates like the mobs' natural spawning, set the mobs' generic attack damage depending on the game difficulty, etc.. -------
+scoreboard players set $GameManager _natural_spawning.current_wait_time 20
+scoreboard players set $GameManager _game_difficulty.current_value 0
 
 #------- Creates a fixed number of bossbars for the mobs' health -------
 bossbar add _healthbar.1 ""
