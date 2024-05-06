@@ -16,4 +16,4 @@ tag @s remove _tmp_vengance_hit_mob
 
 #------- Removes the achieved advancement, being able to execute the skill many times later -------
 # player.advancements.Remove( "Vengeance Player Hit Mob" );
-advancement revoke @s only infernal_mobs:vengeance/player_hit_mob
+advancement revoke @s only infernal_mobs:skills/vengeance/player_hit_mob

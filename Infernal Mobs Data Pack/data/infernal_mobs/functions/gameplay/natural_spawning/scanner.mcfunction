@@ -11,4 +11,5 @@ execute as @e[type=spider, tag=!Infernal_Mob, tag=!Common_Mob] at @s run functio
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 #------- Resets the natural spawner timer count for 1 second (20 ticks). -------
+# GameManager.natural_spawning_current_wait = 20;
 scoreboard players set $GameManager _natural_spawning.current_wait_time 20

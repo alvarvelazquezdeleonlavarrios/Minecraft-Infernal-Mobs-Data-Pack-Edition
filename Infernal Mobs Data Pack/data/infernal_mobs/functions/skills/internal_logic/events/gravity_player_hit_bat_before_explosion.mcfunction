@@ -35,4 +35,4 @@ tp @s ~ ~1500 ~
 
 #------- Removes the achieved advancement, being able to execute the skill many times later -------
 # player.advancements.Remove( "Gravity Player Hit Bat Before Explosion" );
-advancement revoke @s only infernal_mobs:gravity/player_hit_bat_before_explosion
+advancement revoke @s only infernal_mobs:skills/gravity/player_hit_bat_before_explosion

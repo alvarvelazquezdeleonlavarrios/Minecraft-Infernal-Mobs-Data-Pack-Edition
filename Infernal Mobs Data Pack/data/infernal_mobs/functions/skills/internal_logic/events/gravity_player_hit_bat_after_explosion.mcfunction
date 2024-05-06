@@ -31,4 +31,4 @@ scoreboard objectives remove _tmp.gravity.player_initial_pos_z
 
 #------- Removes the achieved advancement, being able to execute the skill many times later -------
 # player.advancements.Remove( "Gravity Player Hit Bat After Explosion" );
-advancement revoke @s only infernal_mobs:gravity/player_hit_bat_after_explosion
+advancement revoke @s only infernal_mobs:skills/gravity/player_hit_bat_after_explosion

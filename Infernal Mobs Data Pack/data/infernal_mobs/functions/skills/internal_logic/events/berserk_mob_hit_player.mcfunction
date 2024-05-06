@@ -8,4 +8,4 @@ execute at @s[gamemode=survival] as @e[tag=Infernal_Mob, tag=berserk, limit=1, s
 
 #------- Removes the advancement to the player, making they able to receive it later when is hit again -------
 # player.advancements.Remove("Berserk Mob Hit Player");
-advancement revoke @s only infernal_mobs:berserk/mob_hit_player
+advancement revoke @s only infernal_mobs:skills/berserk/mob_hit_player

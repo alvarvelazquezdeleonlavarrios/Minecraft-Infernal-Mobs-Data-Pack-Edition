@@ -8,4 +8,4 @@ execute if entity @s[gamemode=survival, nbt={Fire:-20s}] at @s run function infe
 
 #------- Removes the achieved advancement, being able to execute the skill many times later -------
 # player.advancements.Remove( "Fiery Mob Hit Player" );
-advancement revoke @s only infernal_mobs:fiery/mob_hit_player
+advancement revoke @s only infernal_mobs:skills/fiery/mob_hit_player

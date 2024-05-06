@@ -8,4 +8,4 @@ execute if entity @s[gamemode=survival, nbt=!{ActiveEffects:[{Id:20}]}] run effe
 
 #------- Removes the achieved advancement, being able to execute the skill many times later -------
 # player.advancements.Remove( "Wither Mob Hit Player" );
-advancement revoke @s only infernal_mobs:wither/mob_hit_player
+advancement revoke @s only infernal_mobs:skills/wither/mob_hit_player

@@ -8,4 +8,4 @@ execute if entity @s[gamemode=survival] positioned ~ ~3000 ~ run function infern
 
 #------- Removes the achieved advancement, being able to execute the skill many times later -------
 # player.advancements.Remove( "Rust Mob Hit Player " );
-advancement revoke @s only infernal_mobs:rust/mob_hit_player
+advancement revoke @s only infernal_mobs:skills/rust/mob_hit_player

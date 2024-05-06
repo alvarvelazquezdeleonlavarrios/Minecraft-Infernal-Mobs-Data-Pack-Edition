@@ -31,4 +31,4 @@ scoreboard objectives remove _tmp.blastoff.player_initial_pos_z
 
 #------- Removes the achieved advancement, being able to execute the skill many times later -------
 # player.advancements.Remove( "Blastoff Player Hit Bat After Explosion" );
-advancement revoke @s only infernal_mobs:blastoff/player_hit_bat_after_explosion
+advancement revoke @s only infernal_mobs:skills/blastoff/player_hit_bat_after_explosion

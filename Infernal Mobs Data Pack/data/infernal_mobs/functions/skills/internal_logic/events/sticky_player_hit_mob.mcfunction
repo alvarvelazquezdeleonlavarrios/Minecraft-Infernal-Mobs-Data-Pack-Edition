@@ -8,4 +8,4 @@ execute if entity @s[gamemode=survival, nbt={SelectedItem:{}}] at @s if entity @
 
 #------- Removes the achieved advancement, being able to execute the skill many times later -------
 # player.advancements.Remove( "Sticky Player Hit Mob" );
-advancement revoke @s only infernal_mobs:sticky/player_hit_mob
+advancement revoke @s only infernal_mobs:skills/sticky/player_hit_mob

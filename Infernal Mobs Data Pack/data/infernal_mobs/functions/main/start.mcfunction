@@ -64,10 +64,9 @@ scoreboard objectives add _healthbar.current_id dummy
 scoreboard objectives add _natural_spawning.current_wait_time dummy
 scoreboard objectives add _natural_spawning.variant_chance dummy
 
-#------- Creates a variable to read the game's dificulty every moment. -------
+#------- Creates the game variables for the overall complex logic (entities health, game difficulty, mobs death detection, etc.). -------
 scoreboard objectives add _game_difficulty.current_value dummy
-
-#------- Stores and updates automatically the health for each entity (including players) during the game. -------
+scoreboard objectives add _aec_death_detector.is_binded_to_mob dummy
 scoreboard objectives add _health_points health
 
 #------- Creates a fake player named "$Constants" that will contain the value of the constants created previously. -------

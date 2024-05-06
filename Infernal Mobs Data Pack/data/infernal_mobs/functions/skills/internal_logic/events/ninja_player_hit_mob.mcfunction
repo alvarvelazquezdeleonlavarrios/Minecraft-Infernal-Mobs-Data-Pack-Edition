@@ -8,4 +8,4 @@ execute if entity @s[gamemode=survival] at @s if entity @e[tag=Infernal_Mob, tag
 
 #------- Removes the achieved advancement, being able to execute the skill many times later -------
 # player.advancements.Remove( "Ninja Player Hit Mob" );
-advancement revoke @s only infernal_mobs:ninja/player_hit_mob
+advancement revoke @s only infernal_mobs:skills/ninja/player_hit_mob

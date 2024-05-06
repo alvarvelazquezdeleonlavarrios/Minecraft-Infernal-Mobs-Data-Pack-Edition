@@ -1,7 +1,7 @@
 #******************* Gameplay --> Natural Spawning --> Set Random Variant *******************
 
 
-#------- Adds this mob a variable to calculate its chance of being an infernal mob variant. -------
+#------- Adds this mob a variable to calculate its chance of being one of the three variants. -------
 # mob.AddVariable( natural_spawning_variant_chance, -1 );
 scoreboard players set @s _natural_spawning.variant_chance -1
 
