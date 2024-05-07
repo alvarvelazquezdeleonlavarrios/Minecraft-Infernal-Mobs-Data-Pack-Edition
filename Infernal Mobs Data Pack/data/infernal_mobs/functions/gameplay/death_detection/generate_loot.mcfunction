@@ -9,3 +9,7 @@
 execute if entity @s[tag=rare] run function infernal_mobs:gameplay/death_detection/generate_loot/rare
 execute if entity @s[tag=ultra] run function infernal_mobs:gameplay/death_detection/generate_loot/ultra
 execute if entity @s[tag=infernal] run function infernal_mobs:gameplay/death_detection/generate_loot/infernal
+
+#------- Deletes this AEC after spawning the corresponding death loot items. -------
+# Kill( aec_death_detector );
+kill @s

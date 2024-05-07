@@ -67,6 +67,7 @@ scoreboard objectives add _natural_spawning.variant_chance dummy
 #------- Creates the game variables for the overall complex logic (entities health, game difficulty, mobs death detection, etc.). -------
 scoreboard objectives add _game_difficulty.current_value dummy
 scoreboard objectives add _aec_death_detector.is_binded_to_mob dummy
+scoreboard objectives add _aec_death_detector.experience_orbs_amount dummy
 scoreboard objectives add _health_points health
 
 #------- Creates a fake player named "$Constants" that will contain the value of the constants created previously. -------
