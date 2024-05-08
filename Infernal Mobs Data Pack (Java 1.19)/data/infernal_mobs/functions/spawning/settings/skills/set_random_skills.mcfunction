@@ -21,9 +21,9 @@ execute if score @s _tmp.current_skill matches 0 if score @s _tmp.skills_count m
 execute if score @s _tmp.current_skill matches 1 if score @s _tmp.skills_count matches 1.. unless entity @s[tag=alchemist] run function infernal_mobs:spawning/settings/skills/add_alchemist
 
 #------- If wasn't added previously, adds the "Berserk" skill to this mob -------
-# if (mob.tmp_current_skill == 2 && mob.tmp_skills_count >= 1 && mob.tags.Find("berserk") == false):
+# if (mob.tmp_current_skill == 2 && mob.tmp_skills_count >= 1 && mob.tags.Find("berserk") == false && mob.type != #berserk_skill_not_compatible):
 #     mob.skills.Add( new Skill("Berserk") );
-execute if score @s _tmp.current_skill matches 2 if score @s _tmp.skills_count matches 1.. unless entity @s[tag=berserk] run function infernal_mobs:spawning/settings/skills/add_berserk
+execute if score @s _tmp.current_skill matches 2 if score @s _tmp.skills_count matches 1.. unless entity @s[tag=berserk] unless entity @s[type=#infernal_mobs:berserk_skill_not_compatible] run function infernal_mobs:spawning/settings/skills/add_berserk
 
 #------- If wasn't added previously, adds the "Blastoff" skill to this mob -------
 # if (mob.tmp_current_skill == 3 && mob.tmp_skills_count >= 1 && mob.tags.Find("blastoff") == false):
@@ -91,9 +91,9 @@ execute if score @s _tmp.current_skill matches 14 if score @s _tmp.skills_count 
 execute if score @s _tmp.current_skill matches 15 if score @s _tmp.skills_count matches 1.. unless entity @s[tag=quicksand] run function infernal_mobs:spawning/settings/skills/add_quicksand
 
 #------- If wasn't added previously, adds the "Regen" skill to this mob -------
-# if (mob.tmp_current_skill == 16 && mob.tmp_skills_count >= 1 && mob.tags.Find("regen") == false):
+# if (mob.tmp_current_skill == 16 && mob.tmp_skills_count >= 1 && mob.tags.Find("regen") == false && mob.type != #regen_skill_not_compatible):
 #     mob.skills.Add( new Skill("Regen") );
-execute if score @s _tmp.current_skill matches 16 if score @s _tmp.skills_count matches 1.. unless entity @s[tag=regen] run function infernal_mobs:spawning/settings/skills/add_regen
+execute if score @s _tmp.current_skill matches 16 if score @s _tmp.skills_count matches 1.. unless entity @s[tag=regen] unless entity @s[type=#infernal_mobs:regen_skill_not_compatible] run function infernal_mobs:spawning/settings/skills/add_regen
 
 #------- If wasn't added previously, adds the "Rust" skill to this mob -------
 # if (mob.tmp_current_skill == 17 && mob.tmp_skills_count >= 1 && mob.tags.Find("rust") == false):

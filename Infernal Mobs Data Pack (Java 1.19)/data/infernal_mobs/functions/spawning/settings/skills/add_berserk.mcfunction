@@ -11,10 +11,6 @@ tag @s add berserk
 scoreboard players set @s _skills.berserk.current_health 0
 scoreboard players set @s _skills.berserk.current_attack_damage 0
 
-#----- Removes the temporary variables -------
-# deleteVariable( tmp_current_attack_damage );
-scoreboard objectives remove _tmp.current_attack_damage
-
 #------- Decreases the number of skills left for adding to this mob -------
 # mob.tmp_skills_count--;
 scoreboard players operation @s _tmp.skills_count -= $Constants _const.1
