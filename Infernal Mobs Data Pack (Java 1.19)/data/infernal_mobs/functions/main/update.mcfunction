@@ -31,8 +31,8 @@ scoreboard players remove $GameManager _natural_spawning.current_wait_time 1
 
 #+++++++++++++++++++++++++++++++++++ Mobs' Attributes and Behaviours System ++++++++++++++++++++++++++++++++++
 #------- Gets the current game difficulty. Resets the attack damage value for each single infernal mob based on it. -------
-# GameManager.game_difficulty = getDifficulty();
-# mob.updateAttackDamage( GameManager.game_difficulty );
+# GameManager.current_game_difficulty = getDifficulty();
+# mob.updateAttackDamage( GameManager.current_game_difficulty );
 execute store result score $GameManager _game_difficulty.current_value run difficulty
 execute if entity @e[tag=Infernal_Mob] as @e[tag=Infernal_Mob] run function infernal_mobs:gameplay/attack_damage/update
 

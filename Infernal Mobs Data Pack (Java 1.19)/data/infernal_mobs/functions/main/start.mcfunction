@@ -93,7 +93,7 @@ scoreboard players set $Healthbars _healthbar.already_found 0
 
 #------- Creates a fake player named "$GameManager" to do the overall automatic updates like the mobs' natural spawning, set the mobs' generic attack damage depending on the game difficulty, etc.. -------
 scoreboard players set $GameManager _natural_spawning.current_wait_time 20
-scoreboard players set $GameManager _game_difficulty.current_value 0
+scoreboard players set $GameManager _game_difficulty.current_value 1
 
 #------- Creates a fixed number of bossbars for the mobs' health -------
 bossbar add _healthbar.1 ""
@@ -148,10 +148,10 @@ bossbar add _healthbar.49 ""
 bossbar add _healthbar.50 ""
 
 
-#------- Prints a message in the chat when this Data Pack is loaded -------
-tellraw @a {"text": "***************************************************************************","color":"#1A3AA3"}
-tellraw @a {"text": "--------------- Infernal Mobs Data Pack -------------"}
-tellraw @a {"text": "--------------- For Java Edition 1.19.x -------------"}
-tellraw @a {"text": "----------------------- v.1.0 --------------------"}
-tellraw @a {"text": "--- Developed by: Alvar Velázquez de León Lavarrios ---","color":"#B8B8B8"}
-tellraw @a {"text": "***************************************************************************","color":"#1A3AA3"}
+#------- Prints a message in the chat when this Data Pack is reloaded -------
+tellraw @a {"text": "***************************************************************************","color":"#D43313"}
+tellraw @a {"text": "--------------- Infernal Mobs Data Pack -------------","color":"#D62B2B"}
+tellraw @a {"text": "----------------- For Java Edition 1.19 --------------","color":"#D67520"}
+tellraw @a {"text": "------------------------- v.1.0 --------------------","color":"#D6AB1E"}
+tellraw @a {"text": "--- Developed by: Alvar Velázquez de León Lavarrios ---","color":"#B3B3B3"}
+tellraw @a {"text": "***************************************************************************","color":"#D43313"}
