@@ -29,15 +29,15 @@ kill @e[type=area_effect_cloud, tag=random_uuid, tag=spawn_rare, limit=1, sort=n
 # mob.AddRandomSkills( mob.tmp_skills_count );
 function infernal_mobs:spawning/settings/skills/set_random_skills
 
-#------- After adding the skills, sets the custom name for the mob's healthbar -------
-# mob.setName();
-function infernal_mobs:spawning/settings/names/set_name
-
 #------- Removes the temporary variables -------
 # deleteVariable( tmp_skills_count );
 # deleteVariable( tmp_current_skill );
 scoreboard objectives remove _tmp.skills_count
 scoreboard objectives remove _tmp.current_skill
+
+#------- After adding the skills, sets the custom name for the mob's healthbar -------
+# mob.setName();
+function infernal_mobs:spawning/settings/names/set_name
 
 #------- Generates the death loot table for this mob (Rare variant) -------
 function infernal_mobs:spawning/settings/death_loot_table/generate_rare

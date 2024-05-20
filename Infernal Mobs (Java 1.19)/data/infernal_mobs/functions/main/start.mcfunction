@@ -60,6 +60,12 @@ scoreboard objectives add _healthbar.current_search dummy
 scoreboard objectives add _healthbar.already_found dummy
 scoreboard objectives add _healthbar.current_id dummy
 
+scoreboard objectives add _healthbar.found_mob.1 dummy
+
+
+
+
+
 #------- Creates the game variables for the logic that spawns naturally the infernal mobs in the world. -------
 scoreboard objectives add _natural_spawning.current_wait_time dummy
 scoreboard objectives add _natural_spawning.variant_chance dummy

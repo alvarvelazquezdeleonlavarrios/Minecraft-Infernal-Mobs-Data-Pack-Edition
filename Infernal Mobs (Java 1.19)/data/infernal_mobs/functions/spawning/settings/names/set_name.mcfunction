@@ -176,6 +176,7 @@ execute if entity @s[tag=infernal] run data modify block ~ ~ ~ Text1 set value '
 
 
 
+#+++++++++++++++++++++++++++++++++++++ Mob's Healthbar Name ++++++++++++++++++++++++++++++++++++++
 #------- Temporary stores the built name on the mob's Custom Name field -------
 # mob.customName = sign.text1;
 data modify entity @s CustomName set from block ~ ~ ~ Text1
@@ -191,3 +192,13 @@ data modify entity @s CustomName set value ""
 #------- Removes the sign generated -------
 # deleteBlock( sign );
 setblock ~ ~ ~ air replace
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+#------- If there wasn't found any available healthbar, automatically kills this mob teleporting it to the void. -------
+# if (healthbar.already_found == false):
+#   mob.position = mob.position - new Vector3(0, 1000, 0);
+#   kill( mob );
+execute if score $Healthbars _healthbar.already_found matches 0 run tp @s ~ ~-1000 ~
+execute if score $Healthbars _healthbar.already_found matches 0 run kill @s
