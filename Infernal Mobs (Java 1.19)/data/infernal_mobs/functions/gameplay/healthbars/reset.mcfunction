@@ -9,16 +9,6 @@
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-
-scoreboard players set $Healthbars _healthbar.found_mob.1 0
-execute in overworld if entity @e[scores={_healthbar.current_id=1}] run scoreboard players set $Healthbars _healthbar.found_mob.1 1
-execute in the_nether if entity @e[scores={_healthbar.current_id=1}] run scoreboard players set $Healthbars _healthbar.found_mob.1 1
-execute in the_end if entity @e[scores={_healthbar.current_id=1}] run scoreboard players set $Healthbars _healthbar.found_mob.1 1
-execute if score $Healthbars _healthbar.found_mob.1 matches 0 run say Mob #1 Not Found!!
-
-
-
-
 #------- If the healthbar #1 is available, removes it from all players' screen and resets some of its values -------
 execute unless entity @e[scores={_healthbar.current_id=1}] run bossbar set _healthbar.1 players @a[tag=nobody]
 execute unless entity @e[scores={_healthbar.current_id=1}] run bossbar set _healthbar.1 name ""

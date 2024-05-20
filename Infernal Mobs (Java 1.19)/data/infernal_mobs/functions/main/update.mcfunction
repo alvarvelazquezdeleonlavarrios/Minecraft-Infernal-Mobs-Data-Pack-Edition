@@ -1,6 +1,21 @@
 #******************* Main --> Update *******************
 
 
+#+++++++++++++++++++++++++++++++++++ Players' Information Management ++++++++++++++++++++++++++++++++++
+#------- Counts the total number of players in The Nether dimension. -------
+# GameManager.number_of_players_in_the_nether = 0;
+# GameManager.number_of_players_in_the_nether = Players.Count("The Nether");
+scoreboard players set $GameManager _number_of_players.the_nether 0
+execute store result score $GameManager _number_of_players.the_nether if entity @a[predicate=infernal_mobs:in_the_nether]
+
+#------- Counts the total number of players in The End dimension. -------
+# GameManager.number_of_players_in_the_end = 0;
+# GameManager.number_of_players_in_the_end = Players.Count("The End");
+scoreboard players set $GameManager _number_of_players.the_end 0
+execute store result score $GameManager _number_of_players.the_end if entity @a[predicate=infernal_mobs:in_the_end]
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
 #+++++++++++++++++++++++++++++++++++ Mobs's Death Detection System ++++++++++++++++++++++++++++++++++
 #------- Makes the AECs stay every moment in the game so that they never disapear naturally. Also indicates them they're not anymore linked to a mob. -------
 # aec_death_detector.duration = 9999;

@@ -60,12 +60,6 @@ scoreboard objectives add _healthbar.current_search dummy
 scoreboard objectives add _healthbar.already_found dummy
 scoreboard objectives add _healthbar.current_id dummy
 
-scoreboard objectives add _healthbar.found_mob.1 dummy
-
-
-
-
-
 #------- Creates the game variables for the logic that spawns naturally the infernal mobs in the world. -------
 scoreboard objectives add _natural_spawning.current_wait_time dummy
 scoreboard objectives add _natural_spawning.variant_chance dummy
@@ -75,6 +69,8 @@ scoreboard objectives add _game_difficulty.current_value dummy
 scoreboard objectives add _aec_death_detector.is_binded_to_mob dummy
 scoreboard objectives add _aec_death_detector.experience_orbs_amount dummy
 scoreboard objectives add _health_points health
+scoreboard objectives add _number_of_players.the_nether dummy
+scoreboard objectives add _number_of_players.the_end dummy
 
 #------- Creates a fake player named "$Constants" that will contain the value of the constants created previously. -------
 scoreboard players set $Constants _const.1 1

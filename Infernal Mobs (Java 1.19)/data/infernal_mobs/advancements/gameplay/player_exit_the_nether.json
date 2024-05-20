@@ -1,0 +1,21 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {}
+          }
+        ],
+        "from": "minecraft:the_nether",
+        "to": "minecraft:overworld"
+      }
+    }
+  },
+  "rewards": {
+    "function": "infernal_mobs:gameplay/healthbars/events/kill_unlinked_mobs_nether"
+  }
+}
