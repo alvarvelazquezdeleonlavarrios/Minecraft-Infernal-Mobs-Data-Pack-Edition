@@ -1,18 +1,43 @@
 #******************* Main --> Update *******************
 
 
-#+++++++++++++++++++++++++++++++++++ Players' Information Management ++++++++++++++++++++++++++++++++++
-#------- Counts the total number of players in The Nether dimension. -------
+#+++++++++++++++++++++++++++++++++++ The Nether Infernal Mobs Management ++++++++++++++++++++++++++++++++++
+#------- Counts the total number of players in The Nether dimension for the current moment. -------
 # GameManager.number_of_players_in_the_nether = 0;
 # GameManager.number_of_players_in_the_nether = Players.Count("The Nether");
-scoreboard players set $GameManager _number_of_players.the_nether 0
-execute store result score $GameManager _number_of_players.the_nether if entity @a[predicate=infernal_mobs:in_the_nether]
+scoreboard players set $GameManager _number_of_players.current.the_nether 0
+execute store result score $GameManager _number_of_players.current.the_nether if entity @a[predicate=infernal_mobs:in_the_nether]
 
+#------- If the player was killed and is the first player entering the Nether, kills the infernal mobs that could be generated previously -------
+# if (GameManager.previous_number_of_players_in_the_nether == 0 && GameManager.number_of_players_in_the_nether == 1):
+#   GameManager.killUnlinkedMobsNether( 1.5f );
+execute if score $GameManager _number_of_players.previous.the_nether matches 0 if score $GameManager _number_of_players.current.the_nether matches 1 run schedule function infernal_mobs:gameplay/healthbars/kill_unlinked_mobs/nether 30 replace
+
+#------- Counts the total number of players in The Nether dimension for the last moment. -------
+# GameManager.previous_number_of_players_in_the_nether = 0;
+# GameManager.previous_number_of_players_in_the_nether = Players.Count("The Nether");
+scoreboard players set $GameManager _number_of_players.previous.the_nether 0
+execute store result score $GameManager _number_of_players.previous.the_nether if entity @a[predicate=infernal_mobs:in_the_nether]
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+#+++++++++++++++++++++++++++++++++++ The End Infernal Mobs Management ++++++++++++++++++++++++++++++++++
 #------- Counts the total number of players in The End dimension. -------
 # GameManager.number_of_players_in_the_end = 0;
 # GameManager.number_of_players_in_the_end = Players.Count("The End");
 scoreboard players set $GameManager _number_of_players.the_end 0
 execute store result score $GameManager _number_of_players.the_end if entity @a[predicate=infernal_mobs:in_the_end]
+
+#------- If the player was killed and is the first player entering the End, kills the infernal mobs that could be generated previously -------
+# if (GameManager.previous_number_of_players_in_the_end == 0 && GameManager.number_of_players_in_the_end == 1):
+#   GameManager.killUnlinkedMobsEnd( 1.5f );
+execute if score $GameManager _number_of_players.previous.the_end matches 0 if score $GameManager _number_of_players.current.the_end matches 1 run schedule function infernal_mobs:gameplay/healthbars/kill_unlinked_mobs/end 30 replace
+
+#------- Counts the total number of players in The End dimension for the last moment. -------
+# GameManager.previous_number_of_players_in_the_end = 0;
+# GameManager.previous_number_of_players_in_the_end = Players.Count("The End");
+scoreboard players set $GameManager _number_of_players.previous.the_end 0
+execute store result score $GameManager _number_of_players.previous.the_end if entity @a[predicate=infernal_mobs:in_the_end]
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 

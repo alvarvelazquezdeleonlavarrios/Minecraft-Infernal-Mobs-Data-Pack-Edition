@@ -69,8 +69,12 @@ scoreboard objectives add _game_difficulty.current_value dummy
 scoreboard objectives add _aec_death_detector.is_binded_to_mob dummy
 scoreboard objectives add _aec_death_detector.experience_orbs_amount dummy
 scoreboard objectives add _health_points health
-scoreboard objectives add _number_of_players.the_nether dummy
-scoreboard objectives add _number_of_players.the_end dummy
+scoreboard objectives add _number_of_players.current.the_nether dummy
+scoreboard objectives add _number_of_players.current.the_end dummy
+scoreboard objectives add _number_of_players.previous.the_nether dummy
+scoreboard objectives add _number_of_players.previous.the_end dummy
+
+
 
 #------- Creates a fake player named "$Constants" that will contain the value of the constants created previously. -------
 scoreboard players set $Constants _const.1 1
@@ -96,6 +100,12 @@ scoreboard players set $Healthbars _healthbar.already_found 0
 #------- Creates a fake player named "$GameManager" to do the overall automatic updates like the mobs' natural spawning, set the mobs' generic attack damage depending on the game difficulty, etc.. -------
 scoreboard players set $GameManager _natural_spawning.current_wait_time 20
 scoreboard players set $GameManager _game_difficulty.current_value 1
+scoreboard players set $GameManager _number_of_players.current.the_nether 0
+scoreboard players set $GameManager _number_of_players.previous.the_nether 0
+scoreboard players set $GameManager _number_of_players.current.the_end 0
+scoreboard players set $GameManager _number_of_players.previous.the_end 0
+
+
 
 #------- Creates a fixed number of bossbars for the mobs' health -------
 bossbar add _healthbar.1 ""
@@ -148,6 +158,7 @@ bossbar add _healthbar.47 ""
 bossbar add _healthbar.48 ""
 bossbar add _healthbar.49 ""
 bossbar add _healthbar.50 ""
+
 
 
 #------- Prints a message in the chat when this Data Pack is reloaded -------
