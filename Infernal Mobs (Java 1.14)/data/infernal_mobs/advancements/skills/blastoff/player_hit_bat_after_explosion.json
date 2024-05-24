@@ -1,0 +1,16 @@
+{
+    "criteria": {
+      "target": {
+        "trigger": "minecraft:player_hurt_entity",
+        "conditions": {
+          "entity": {
+            "type": "minecraft:bat",
+            "nbt": "{Tags:[\"blastoff_after_explosion\"]}"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "infernal_mobs:skills/internal_logic/events/blastoff_player_hit_bat_after_explosion"
+    }
+}

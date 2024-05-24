@@ -1,0 +1,16 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "#infernal_mobs:hostile_mobs",
+          "nbt": "{Tags:[\"Infernal_Mob\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "infernal_mobs:gameplay/death_detection/player_killed_mob"
+  }
+}

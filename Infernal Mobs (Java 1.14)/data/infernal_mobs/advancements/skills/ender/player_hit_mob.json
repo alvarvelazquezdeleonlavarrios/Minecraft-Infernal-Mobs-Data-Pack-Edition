@@ -1,0 +1,15 @@
+{
+    "criteria": {
+      "target": {
+        "trigger": "minecraft:player_hurt_entity",
+        "conditions": {
+          "entity": {
+            "nbt": "{Tags:[\"Infernal_Mob\",\"ender\"]}"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "infernal_mobs:skills/internal_logic/events/ender_player_hit_mob"
+    }
+}
