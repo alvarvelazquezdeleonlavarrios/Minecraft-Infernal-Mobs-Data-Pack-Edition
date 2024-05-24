@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "source_entity": {
+            "nbt": "{Tags:[\"Infernal_Mob\",\"lifesteal\"]}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "infernal_mobs:skills/internal_logic/events/lifesteal_mob_hit_player"
+  }
+}

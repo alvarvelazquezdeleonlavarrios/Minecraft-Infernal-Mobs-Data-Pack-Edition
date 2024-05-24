@@ -1,0 +1,17 @@
+{
+  "values": [
+    "minecraft:creeper",
+    "minecraft:skeleton",
+    "minecraft:witch",
+
+    "minecraft:stray",
+    "minecraft:shulker",
+
+    "minecraft:ghast",
+    "minecraft:piglin",
+    "minecraft:piglin_brute",
+    "minecraft:hoglin",
+    "minecraft:zoglin",
+    "minecraft:wither_skeleton"
+  ]
+}
