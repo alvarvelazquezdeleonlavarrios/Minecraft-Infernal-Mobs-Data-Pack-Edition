@@ -41,9 +41,9 @@ execute store result entity @s Motion[1] double 0.0012 run scoreboard players ge
 execute store result entity @s Motion[2] double 0.0012 run scoreboard players get @s _tmp.ply.pos.z
 
 #------- Sets the acceleration vector to the fireball -------
-execute store result entity @s power[0] double 0.00008 run scoreboard players get @s _tmp.ply.pos.x
-execute store result entity @s power[1] double 0.00008 run scoreboard players get @s _tmp.ply.pos.y
-execute store result entity @s power[2] double 0.00008 run scoreboard players get @s _tmp.ply.pos.z
+execute store result entity @s power[0] double 0.00012 run scoreboard players get @s _tmp.ply.pos.x
+execute store result entity @s power[1] double 0.00012 run scoreboard players get @s _tmp.ply.pos.y
+execute store result entity @s power[2] double 0.00012 run scoreboard players get @s _tmp.ply.pos.z
 
 #------- Removes the temporary variables -------
 scoreboard objectives remove _tmp.ent.pos.x
