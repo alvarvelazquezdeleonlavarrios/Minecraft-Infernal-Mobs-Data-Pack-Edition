@@ -1,7 +1,7 @@
 #******************* Gameplay --> Natural Spawning --> Scanner *******************
 
 
-#++++++++++++++++++++++++++++++++ Hostile Mobs List (for Java 1.19) ++++++++++++++++++++++++++++++++
+#++++++++++++++++++++++++++++++++ Hostile Mobs List ++++++++++++++++++++++++++++++++
 #------- In this new second, checks for new default mobs that spawned naturally in the game. Procures check them once. -------
 execute as @e[type=#infernal_mobs:hostile_mobs, tag=!Infernal_Mob, tag=!Common_Mob] at @s run function infernal_mobs:gameplay/natural_spawning/set_random_variant
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
