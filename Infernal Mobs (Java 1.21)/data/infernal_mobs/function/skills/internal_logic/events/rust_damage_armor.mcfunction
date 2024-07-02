@@ -46,11 +46,11 @@ scoreboard players set @s _tmp.rust.armor_left_hand_current_damage 0
 # player._tmp_body_damage = player.Inventory[102].damage;
 # player._tmp_head_damage = player.Inventory[103].damage;
 # player._tmp_left_hand_damage = player.Inventory[-106].damage;
-execute store result score @s _tmp.rust.armor_feet_current_damage run data get entity @s Inventory[{Slot:100b}].tag.Damage
-execute store result score @s _tmp.rust.armor_legs_current_damage run data get entity @s Inventory[{Slot:101b}].tag.Damage
-execute store result score @s _tmp.rust.armor_body_current_damage run data get entity @s Inventory[{Slot:102b}].tag.Damage
-execute store result score @s _tmp.rust.armor_head_current_damage run data get entity @s Inventory[{Slot:103b}].tag.Damage
-execute store result score @s _tmp.rust.armor_left_hand_current_damage run data get entity @s Inventory[{Slot:-106b}].tag.Damage
+execute store result score @s _tmp.rust.armor_feet_current_damage run data get entity @s Inventory[{Slot:100b}].components."minecraft:damage"
+execute store result score @s _tmp.rust.armor_legs_current_damage run data get entity @s Inventory[{Slot:101b}].components."minecraft:damage"
+execute store result score @s _tmp.rust.armor_body_current_damage run data get entity @s Inventory[{Slot:102b}].components."minecraft:damage"
+execute store result score @s _tmp.rust.armor_head_current_damage run data get entity @s Inventory[{Slot:103b}].components."minecraft:damage"
+execute store result score @s _tmp.rust.armor_left_hand_current_damage run data get entity @s Inventory[{Slot:-106b}].components."minecraft:damage"
 
 # player._tmp_feet_damage = player._tmp_feet_damage + 4;
 # player._tmp_legs_damage = player._tmp_legs_damage + 4;

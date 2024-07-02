@@ -35,6 +35,9 @@
     "minecraft:zoglin",
     "minecraft:wither_skeleton",
 
-    "minecraft:warden"
+    "minecraft:warden",
+
+    "minecraft:breeze",
+    "minecraft:bogged"
   ]
 }

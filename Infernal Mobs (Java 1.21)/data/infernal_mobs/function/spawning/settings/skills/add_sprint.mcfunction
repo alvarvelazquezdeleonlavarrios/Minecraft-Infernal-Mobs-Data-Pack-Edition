@@ -31,6 +31,8 @@ execute if entity @s[type=phantom] run data merge entity @s {attributes:[{id:"mi
 execute if entity @s[type=guardian] run data merge entity @s {attributes:[{id:"minecraft:generic.movement_speed",base:0.6}]}
 execute if entity @s[type=elder_guardian] run data merge entity @s {attributes:[{id:"minecraft:generic.movement_speed",base:0.4}]}
 execute if entity @s[type=warden] run data merge entity @s {attributes:[{id:"minecraft:generic.movement_speed",base:0.4}]}
+execute if entity @s[type=breeze] run data merge entity @s {attributes:[{id:"minecraft:generic.movement_speed",base:0.7}]}
+execute if entity @s[type=bogged] run data merge entity @s {attributes:[{id:"minecraft:generic.movement_speed",base:0.35}]}
 
 #------- End dimension updates mobs. -------
 execute if entity @s[type=endermite] run data merge entity @s {attributes:[{id:"minecraft:generic.movement_speed",base:0.35}]}

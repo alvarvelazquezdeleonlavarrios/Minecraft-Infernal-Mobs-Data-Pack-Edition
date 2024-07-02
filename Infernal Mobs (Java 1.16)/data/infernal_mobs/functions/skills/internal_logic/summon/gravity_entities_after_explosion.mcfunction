@@ -2,7 +2,7 @@
 
 
 #++++++++++++++++++++++++++++++ Important Note ++++++++++++++++++++++++++++++++
-# All this operations are executed too above into the "space". A place where players usually don't visit or can't access to.
+# All these operations are executed too above into the "space". A place where players usually don't visit or can't access to.
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 

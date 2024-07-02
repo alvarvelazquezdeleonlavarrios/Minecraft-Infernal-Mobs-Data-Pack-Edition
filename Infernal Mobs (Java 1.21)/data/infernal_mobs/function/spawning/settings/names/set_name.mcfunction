@@ -191,8 +191,42 @@ data modify entity @s CustomName set from block ~ ~ ~ front_text.messages[0]
 function infernal_mobs:spawning/settings/healthbars/find_available_healthbar
 
 #------- Resets the mob's name to its default value -------
-# mob.customName = "";
-data modify entity @s CustomName set value '{"text":""}'
+# mob.customName = mob.type.ToString();
+# mob.customNameVisible = false;
+execute if entity @s[type=zombie] run data modify entity @s CustomName set value '{"text":"Zombie"}'
+execute if entity @s[type=spider] run data modify entity @s CustomName set value '{"text":"Spider"}'
+execute if entity @s[type=spider] run data modify entity @s CustomName set value '{"text":"Spider"}'
+execute if entity @s[type=skeleton] run data modify entity @s CustomName set value '{"text":"Skeleton"}'
+execute if entity @s[type=enderman] run data modify entity @s CustomName set value '{"text":"Enderman"}'
+execute if entity @s[type=witch] run data modify entity @s CustomName set value '{"text":"Witch"}'
+execute if entity @s[type=slime] run data modify entity @s CustomName set value '{"text":"Slime"}'
+execute if entity @s[type=cave_spider] run data modify entity @s CustomName set value '{"text":"Cave Spider"}'
+execute if entity @s[type=silverfish] run data modify entity @s CustomName set value '{"text":"Silverfish"}'
+execute if entity @s[type=pillager] run data modify entity @s CustomName set value '{"text":"Pillager"}'
+execute if entity @s[type=vindicator] run data modify entity @s CustomName set value '{"text":"Vindicator"}'
+execute if entity @s[type=evoker] run data modify entity @s CustomName set value '{"text":"Evoker"}'
+execute if entity @s[type=vex] run data modify entity @s CustomName set value '{"text":"Vex"}'
+execute if entity @s[type=ravager] run data modify entity @s CustomName set value '{"text":"Ravager"}'
+execute if entity @s[type=drowned] run data modify entity @s CustomName set value '{"text":"Drowned"}'
+execute if entity @s[type=husk] run data modify entity @s CustomName set value '{"text":"Husk"}'
+execute if entity @s[type=stray] run data modify entity @s CustomName set value '{"text":"Stray"}'
+execute if entity @s[type=phantom] run data modify entity @s CustomName set value '{"text":"Phantom"}'
+execute if entity @s[type=guardian] run data modify entity @s CustomName set value '{"text":"Guardian"}'
+execute if entity @s[type=elder_guardian] run data modify entity @s CustomName set value '{"text":"Elder Guardian"}'
+execute if entity @s[type=endermite] run data modify entity @s CustomName set value '{"text":"Endermite"}'
+execute if entity @s[type=shulker] run data modify entity @s CustomName set value '{"text":"Shulker"}'
+execute if entity @s[type=blaze] run data modify entity @s CustomName set value '{"text":"Blaze"}'
+execute if entity @s[type=ghast] run data modify entity @s CustomName set value '{"text":"Ghast"}'
+execute if entity @s[type=magma_cube] run data modify entity @s CustomName set value '{"text":"Magma Cube"}'
+execute if entity @s[type=piglin] run data modify entity @s CustomName set value '{"text":"Piglin"}'
+execute if entity @s[type=piglin_brute] run data modify entity @s CustomName set value '{"text":"Piglin Brute"}'
+execute if entity @s[type=hoglin] run data modify entity @s CustomName set value '{"text":"Hoglin"}'
+execute if entity @s[type=zoglin] run data modify entity @s CustomName set value '{"text":"Zoglin"}'
+execute if entity @s[type=wither_skeleton] run data modify entity @s CustomName set value '{"text":"Wither Skeleton"}'
+execute if entity @s[type=warden] run data modify entity @s CustomName set value '{"text":"Warden"}'
+execute if entity @s[type=breeze] run data modify entity @s CustomName set value '{"text":"Breeze"}'
+execute if entity @s[type=bogged] run data modify entity @s CustomName set value '{"text":"Bogged"}'
+data modify entity @s CustomNameVisible set value 0b
 
 #------- Removes the sign generated -------
 # deleteBlock( sign );

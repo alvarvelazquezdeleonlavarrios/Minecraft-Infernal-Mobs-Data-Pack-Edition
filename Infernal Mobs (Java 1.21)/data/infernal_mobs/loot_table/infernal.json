@@ -5,20 +5,20 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_hoe",
-          "weight": 3,
-          "quality": 1,
+          "name": "minecraft:diamond_shovel",
+          "weight": 1,
+          "quality": 3,
           "functions": [
             {
               "function": "minecraft:enchant_with_levels",
               "levels": {
-                "min": 10,
-                "max": 20
+                "min": 20,
+                "max": 30
               },
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.6
+                  "chance": 0.85
                 }
               ]
             }
@@ -26,20 +26,83 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:bow",
-          "weight": 2,
-          "quality": 2,
+          "name": "minecraft:diamond_pickaxe",
+          "weight": 1,
+          "quality": 3,
           "functions": [
             {
               "function": "minecraft:enchant_with_levels",
               "levels": {
-                "min": 10,
-                "max": 20
+                "min": 20,
+                "max": 30
               },
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.6
+                  "chance": 0.85
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_axe",
+          "weight": 1,
+          "quality": 3,
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "min": 20,
+                "max": 30
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.85
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_sword",
+          "weight": 1,
+          "quality": 3,
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "min": 20,
+                "max": 30
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.85
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_hoe",
+          "weight": 1,
+          "quality": 3,
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "min": 20,
+                "max": 30
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.85
                 }
               ]
             }
@@ -55,13 +118,13 @@
             {
               "function": "minecraft:enchant_with_levels",
               "levels": {
-                "min": 10,
-                "max": 20
+                "min": 20,
+                "max": 30
               },
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.6
+                  "chance": 0.85
                 }
               ]
             }
@@ -76,13 +139,13 @@
             {
               "function": "minecraft:enchant_with_levels",
               "levels": {
-                "min": 10,
-                "max": 20
+                "min": 20,
+                "max": 30
               },
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.6
+                  "chance": 0.85
                 }
               ]
             }
@@ -97,13 +160,13 @@
             {
               "function": "minecraft:enchant_with_levels",
               "levels": {
-                "min": 10,
-                "max": 20
+                "min": 20,
+                "max": 30
               },
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.6
+                  "chance": 0.85
                 }
               ]
             }
@@ -118,98 +181,13 @@
             {
               "function": "minecraft:enchant_with_levels",
               "levels": {
-                "min": 10,
-                "max": 20
+                "min": 20,
+                "max": 30
               },
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.6
-                }
-              ]
-            }
-          ]
-        },
-
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:iron_helmet",
-          "weight": 2,
-          "quality": 2,
-          "functions": [
-            {
-              "function": "minecraft:enchant_with_levels",
-              "levels": {
-                "min": 10,
-                "max": 20
-              },
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.6
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:iron_chestplate",
-          "weight": 2,
-          "quality": 2,
-          "functions": [
-            {
-              "function": "minecraft:enchant_with_levels",
-              "levels": {
-                "min": 10,
-                "max": 20
-              },
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.6
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:iron_leggings",
-          "weight": 2,
-          "quality": 2,
-          "functions": [
-            {
-              "function": "minecraft:enchant_with_levels",
-              "levels": {
-                "min": 10,
-                "max": 20
-              },
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.6
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:iron_boots",
-          "weight": 2,
-          "quality": 2,
-          "functions": [
-            {
-              "function": "minecraft:enchant_with_levels",
-              "levels": {
-                "min": 10,
-                "max": 20
-              },
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.6
+                  "chance": 0.85
                 }
               ]
             }
@@ -218,20 +196,20 @@
         
         {
           "type": "minecraft:item",
-          "name": "minecraft:golden_helmet",
+          "name": "minecraft:diamond_helmet",
           "weight": 2,
           "quality": 2,
           "functions": [
             {
               "function": "minecraft:enchant_with_levels",
               "levels": {
-                "min": 10,
-                "max": 20
+                "min": 20,
+                "max": 30
               },
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.6
+                  "chance": 0.85
                 }
               ]
             }
@@ -239,20 +217,20 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:golden_chestplate",
+          "name": "minecraft:diamond_chestplate",
           "weight": 2,
           "quality": 2,
           "functions": [
             {
               "function": "minecraft:enchant_with_levels",
               "levels": {
-                "min": 10,
-                "max": 20
+                "min": 20,
+                "max": 30
               },
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.6
+                  "chance": 0.85
                 }
               ]
             }
@@ -260,20 +238,20 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:golden_leggings",
+          "name": "minecraft:diamond_leggings",
           "weight": 2,
           "quality": 2,
           "functions": [
             {
               "function": "minecraft:enchant_with_levels",
               "levels": {
-                "min": 10,
-                "max": 20
+                "min": 20,
+                "max": 30
               },
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.6
+                  "chance": 0.85
                 }
               ]
             }
@@ -281,20 +259,20 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:golden_boots",
+          "name": "minecraft:diamond_boots",
           "weight": 2,
           "quality": 2,
           "functions": [
             {
               "function": "minecraft:enchant_with_levels",
               "levels": {
-                "min": 10,
-                "max": 20
+                "min": 20,
+                "max": 30
               },
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.6
+                  "chance": 0.85
                 }
               ]
             }
@@ -303,7 +281,7 @@
 
         {
           "type": "minecraft:item",
-          "name": "minecraft:golden_apple",
+          "name": "minecraft:diamond",
           "weight": 2,
           "quality": 2,
           "functions": [
@@ -315,20 +293,20 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:blaze_powder",
+          "name": "minecraft:ender_pearl",
           "weight": 2,
           "quality": 2,
           "functions": [
             {
               "function": "minecraft:set_count",
-              "count": 5
+              "count": 3
             }
           ]
         },
 
         {
           "type": "minecraft:loot_table",
-          "name": "infernal_mobs:enchanted_books/ultra",
+          "value": "infernal_mobs:enchanted_books/infernal",
           "weight": 2,
           "quality": 3
         }
