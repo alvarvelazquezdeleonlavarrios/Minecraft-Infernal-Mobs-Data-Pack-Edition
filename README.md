@@ -6,6 +6,10 @@ Welcome! This is a personal project about a data pack for Minecraft (Java Editio
 
 This data pack tries to recreate the same experience of the mod, **without needing the user to install additional software** on the game or PC, just copy de data pack folder when creating a new world or directly on the world's save path.
 
+| Rare Mob | Ultra Mob | Infernal Mob |
+| ---- | ---- | ---- |
+| ![Rare Mob](/src/img/variants/rare.gif) | ![Ultra Mob](/src/img/variants/ultra.gif) | ![Infernal Mob](/src/img/variants/infernal.gif) |
+
 > [!IMPORTANT]
 > Currently, this data pack is available **only for Minecraft main releases**, since **v.1.14** and above.
 
@@ -91,22 +95,22 @@ Inside the game, if your world is allowed to use cheats (commands), then open th
 
 Thanks to the following people for making this project possible:
 
-- **[AtomicStryker](https://github.com/AtomicStryker)**
+- **[AtomicStryker](https://github.com/AtomicStryker):**
 The main person of the original idea. Thanks to its [mod's main code](https://github.com/AtomicStryker/atomicstrykers-minecraft-mods/tree/1.19/InfernalMobs), I was able to code the majority of this data pack.
 
-- **[BigPapi13](https://github.com/BigPapi13)**
+- **[BigPapi13](https://github.com/BigPapi13):**
 For giving me the idea to develop some skills that involves physical movements to the player (blastoff and gravity) with the Creepers' explotions method from its [Delta](https://github.com/BigPapi13/Delta) data pack project and its [How to Give Players Motion with Commands | Minecraft Tutorial](https://www.youtube.com/watch?v=c4cnUvu4EJQ) video.
 
-- **[Legitimoose](https://www.youtube.com/@Legitimoose)**
+- **[Legitimoose](https://www.youtube.com/@Legitimoose):**
 For his [Datapack Tutorial](https://www.youtube.com/playlist?list=PLpjtAMQmETlSOZzZbQOmoU87js78dZGbO) playlist on YouTube, for helping me to understand the syntax of Minecraft commands, mainly about the use of NBT Data.
 
-- **[Cloud Wolf](https://www.youtube.com/@Cl0udWolf)**
+- **[Cloud Wolf](https://www.youtube.com/@Cl0udWolf):**
 For his [Minecraft Tutorials](https://www.youtube.com/playlist?list=PLTRX9BDGoc4eFY8KtR4i4d050jMjPDiGn) playlist on YouTube, mainly helping me to implement the predicates, advancements, and bossbars system.
 
-- **[Timber Forge](https://www.youtube.com/@TimberForge)**
+- **[Timber Forge](https://www.youtube.com/@TimberForge):**
 For his [Data Pack Tutorials - Minecraft Java Edition](https://www.youtube.com/playlist?list=PLi7Dhu-qOl8N_lonfnHczcqmDSgEkCvc0) playlist on YouTube, that helped me to develop the natural spawning system and loot tables for the mobs.
 
-- **[MaxStuff](https://www.youtube.com/@TimberForge)**
+- **[MaxStuff](https://www.youtube.com/@TimberForge):**
 For his [Minecraft Tutorials](https://www.youtube.com/playlist?list=PLG79zAI7kICwJRGBGMv134TBqIig4Nr-f) YouTube playlist that helped me to create custom bossbars and set them to mobs, getting their current health every moment.
 
 ## Disclaimer

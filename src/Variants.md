@@ -1,4 +1,4 @@
-# Minecraft Infernal Mobs --> Mob Variants List
+# Minecraft Infernal Mobs --> Variants List
 
 The 3 variants implemented for the mobs are the following:
 

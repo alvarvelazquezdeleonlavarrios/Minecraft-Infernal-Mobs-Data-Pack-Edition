@@ -1,4 +1,4 @@
-# Minecraft Infernal Mobs --> Hostile/Neutral Built-in Mobs List
+# Minecraft Infernal Mobs --> Hostile/Neutral Built-in Entities List
 
 The skills and variants' behaviours can be used only for the following **Minecraft built-in entities**:
 
@@ -38,6 +38,6 @@ The skills and variants' behaviours can be used only for the following **Minecra
 - Bogged[^4]
 
 [^1]: v.1.14 and v.1.15 only
-[^2]: since v.1.16 and later
-[^3]: since v.1.19 and later
-[^4]: since v.1.21 and later
+[^2]: Since v.1.16 and later
+[^3]: Since v.1.19 and later
+[^4]: Since v.1.21 and later
