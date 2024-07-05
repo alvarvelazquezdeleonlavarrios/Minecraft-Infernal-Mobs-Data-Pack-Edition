@@ -4,7 +4,7 @@ The 28 skills implemented for the mobs are the following.
 
 ### 1UP
 
-Fully restores its health once when it's under 20% the first time.
+Fully restores its health once it's under 20% the first time.
 
 ![Skill-1UP](/src/img/skills/1up.gif)
 
@@ -16,13 +16,13 @@ Throws potions to the player: slowness, weakness, poison and instant damage.
 
 ### Berserk
 
-Deals double damage to the player, but hurts itself when attacking it.
+Deals double damage to the player, but hurts itself when attacking.
 
 ![Skill-Berserk](/src/img/skills/berserk.gif)
 
 ### Blastoff
 
-Throws the player into the air from time to time.
+Tosses the player into the air from time to time.
 
 ![Skill-Blastoff](/src/img/skills/blastoff.gif)
 
@@ -34,9 +34,10 @@ Mob has a lot more attack resistance (generic defense increased).
 
 ### Choke
 
-Drowns the player on land, until the mob is hit.
+Drowns the player on land, until the mob is hit or the player escaped.
 
-**Note:** due technical limitations of older versions of the game, this skill is only available since Minecraft: Java Edition v.1.20 (Trails & Tales Update) and later.
+> [NOTE]
+> Due technical limitations of older versions of the game, this skill is only available since **Minecraft: Java Edition v.1.20 (Trails & Tales Update)** and later.
 
 ![Skill-Choke](/src/img/skills/choke.gif)
 
@@ -108,7 +109,7 @@ Player gets slowness effect from time to time when the mob is near.
 
 ### Regen
 
-Mob restores automatically a small amount of its health from time to time.
+Mob restores automatically a small amount of its health.
 
 ![Skill-Regen](/src/img/skills/regen.gif)
 
@@ -116,7 +117,8 @@ Mob restores automatically a small amount of its health from time to time.
 
 Additional damage amount on player's weapon when mob is attacked and its armour when attacks the player.
 
-**Note:** due technical limitations of older versions of the game, this skill is only available since Minecraft: Java Edition v.1.17 (Caves & Cliffs: Part I Update) and later.
+> [NOTE]
+> Due technical limitations of older versions of the game, this skill is only available since **Minecraft: Java Edition v.1.17 (Caves & Cliffs: Part I Update)** and later.
 
 ![Skill-Rust](/src/img/skills/rust.gif)
 
@@ -128,7 +130,7 @@ Player gets hunger effect when hitting the mob, or viceversa.
 
 ### Sprint
 
-Mob moves with higher speed than default.
+Movement speed boost to the mob.
 
 ![Skill-Sprint](/src/img/skills/sprint.gif)
 
@@ -140,7 +142,7 @@ When attacked, steals player's main hand item from time to time.
 
 ### Storm
 
-Summons lighting bolts at player's position from time to time.
+Summons lighting bolts at player's position.
 
 ![Skill-Storm](/src/img/skills/storm.gif)
 
@@ -150,11 +152,11 @@ Mob is invulnerable to attacks' knockback.
 
 ![Skill-Unyielding](/src/img/skills/unyielding.gif)
 
-### Vengeange
+### Vengeance
 
-Deals a small amount of damage to the player when the mob is hit.
+Sometimes deals a small amount of damage to player when the mob is hit.
 
-![Skill-Vengeange](/src/img/skills/vengeange.gif)
+![Skill-Vengeance](/src/img/skills/vengeance.gif)
 
 ### Weakness
 
@@ -164,7 +166,7 @@ Player gets weakness effect when hitting the mob, or viceversa.
 
 ### Webber
 
-Sets webs at player's ground position from time to time.
+Sets web blocks at player's ground position from time to time.
 
 ![Skill-Webber](/src/img/skills/webber.gif)
 
