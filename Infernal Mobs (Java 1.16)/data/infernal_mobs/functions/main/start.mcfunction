@@ -163,8 +163,8 @@ bossbar add _healthbar.50 ""
 
 #------- Prints a message in the chat when this Data Pack is reloaded -------
 tellraw @a {"text": "***************************************************************************","color":"#D43313"}
-tellraw @a {"text": "--------------- Infernal Mobs Data Pack -------------","color":"#D62B2B"}
-tellraw @a {"text": "----------------- For Java Edition 1.16 --------------","color":"#D67520"}
+tellraw @a {"text": "----------- Infernal Mobs: Data Pack Edition -----------","color":"#D62B2B"}
+tellraw @a {"text": "---------- For Minecraft: Java Edition v.1.16 -----------","color":"#D67520"}
 tellraw @a {"text": "------------------------- v.1.0 --------------------","color":"#D6AB1E"}
 tellraw @a {"text": "--- Developed by: Alvar Velázquez de León Lavarrios ---","color":"#B3B3B3"}
 tellraw @a {"text": "***************************************************************************","color":"#D43313"}
