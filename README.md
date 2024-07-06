@@ -79,7 +79,7 @@ The complete list of the entities that can be set with skills and variants' beha
 
 1. From this repository webpage, go to the **Releases** section.
 2. Select a release and look for its **Assets** section.
-3. Download the file **Infernal Mobs (Java 1.x) \[v.1.x\].zip** according to the version of the game you're going to play.
+3. Download the file **Infernal_Mobs_Java_1.`Minecraft Release`_v.1.`Data Pack Version`.zip** according to the version of the game you're going to play.
 
 ### Installing the Data Pack
 
