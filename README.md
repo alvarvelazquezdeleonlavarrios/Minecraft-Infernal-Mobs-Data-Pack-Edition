@@ -10,8 +10,8 @@ This data pack tries to recreate the same experience of the mod, **without needi
 | ---- | ---- | ---- |
 | ![Rare Mob](/src/img/variants/rare.gif) | ![Ultra Mob](/src/img/variants/ultra.gif) | ![Infernal Mob](/src/img/variants/infernal.gif) |
 
-> [!IMPORTANT]
-> Currently, this data pack is available **only for Minecraft main releases**, since **v.1.14** and above.
+> [!WARNING]
+> This data pack is available **only for Minecraft main releases**, since **v.1.14** and above. So if you try to play in minor releases (like 1.19.3, 1.16.2, etc.) it could cause troubles.
 
 ## Data Pack Main Features
 
