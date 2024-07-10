@@ -4,7 +4,7 @@
 
 Welcome! This is a personal project about a data pack for Minecraft (Java Edition only), inspired on the iconic mod of the same name, [Infernal Mobs](https://www.curseforge.com/minecraft/mc-mods/atomicstrykers-infernal-mobs), developed by **AtomicStryker** for CurseForge.
 
-This data pack tries to recreate the same experience of the mod, **without needing the user to install additional software** on the game or PC, just copy de data pack folder when creating a new world or directly on the world's save path.
+This data pack tries to recreate the same experience of the mod, **without needing the user to install additional software** on the game or PC, just copy the data pack folder when creating a new world or directly on the world's save path.
 
 | Rare Mob | Ultra Mob | Infernal Mob |
 | ---- | ---- | ---- |
@@ -99,7 +99,7 @@ Thanks to the following people for making this project possible:
 The main person of the original idea. Thanks to its [mod's main code](https://github.com/AtomicStryker/atomicstrykers-minecraft-mods/tree/1.19/InfernalMobs), I was able to code the majority of this data pack.
 
 - **[BigPapi13](https://github.com/BigPapi13):**
-For giving me the idea to develop some skills that involves physical movements to the player (blastoff and gravity) with the Creepers' explotions method from its [Delta](https://github.com/BigPapi13/Delta) data pack project and its [How to Give Players Motion with Commands | Minecraft Tutorial](https://www.youtube.com/watch?v=c4cnUvu4EJQ) video.
+For giving me the idea to develop some skills that involves physical movements to the player (blastoff and gravity) with the Creepers' explosions method from its [Delta](https://github.com/BigPapi13/Delta) data pack project and its [How to Give Players Motion with Commands | Minecraft Tutorial](https://www.youtube.com/watch?v=c4cnUvu4EJQ) video.
 
 - **[Legitimoose](https://www.youtube.com/@Legitimoose):**
 For his [Datapack Tutorial](https://www.youtube.com/playlist?list=PLpjtAMQmETlSOZzZbQOmoU87js78dZGbO) playlist on YouTube, for helping me to understand the syntax of Minecraft commands, mainly about the use of NBT Data.

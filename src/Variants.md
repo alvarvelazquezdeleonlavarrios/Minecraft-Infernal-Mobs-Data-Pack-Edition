@@ -60,4 +60,4 @@ Features:
 - **Custom death loot table**: chainmail items[^1], diamond items[^1], ender pearl, enchanted book[^2]
 
 [^1]: Weapons and armor items are enchanted randomly and with random enchantments, depending on the mob's variant: stronger the mob, more powerful enchantements.
-[^2]: Books are spawned just with one random enchantment, which depends on mob's variant: stronger the mob, more powerful enchantements.
+[^2]: Books are spawned just with one random enchantment, which depends on mob's variant: stronger the variant, more powerful enchantements.

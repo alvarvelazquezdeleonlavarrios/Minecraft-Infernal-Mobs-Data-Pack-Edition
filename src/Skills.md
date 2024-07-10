@@ -37,7 +37,7 @@ Mob has a lot more attack resistance (generic defense increased).
 Drowns the player on land, until the mob is hit or the player escaped.
 
 > [!NOTE]
-> Due technical limitations of older versions of the game, this skill is only available since **Minecraft: Java Edition v.1.20 (Trails & Tales Update)** and later.
+> Due to technical limitations of older versions of the game, this skill is only available since **Minecraft: Java Edition v.1.20 (Trails & Tales Update)** and later.
 
 ![Skill-Choke](/src/img/skills/choke.gif)
 
@@ -115,10 +115,10 @@ Mob restores automatically a small amount of its health.
 
 ### Rust
 
-Additional damage amount on player's weapon when mob is attacked and its armour when attacks the player.
+Additional damage amount on player's weapon when mob is attacked and its armor when attacks the player.
 
 > [!NOTE]
-> Due technical limitations of older versions of the game, this skill is only available since **Minecraft: Java Edition v.1.17 (Caves & Cliffs: Part I Update)** and later.
+> Due to technical limitations of older versions of the game, this skill is only available since **Minecraft: Java Edition v.1.17 (Caves & Cliffs: Part I Update)** and later.
 
 ![Skill-Rust](/src/img/skills/rust.gif)
 
