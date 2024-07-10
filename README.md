@@ -113,6 +113,12 @@ For his [Data Pack Tutorials - Minecraft Java Edition](https://www.youtube.com/p
 - **[MaxStuff](https://www.youtube.com/@TimberForge):**
 For his [Minecraft Tutorials](https://www.youtube.com/playlist?list=PLG79zAI7kICwJRGBGMv134TBqIig4Nr-f) YouTube playlist that helped me to create custom bossbars and set them to mobs, getting their current health every moment.
 
+## External References
+
+You can also find this Data Pack in the following web sites:
+
+- [Planet Minecraft](https://www.planetminecraft.com/data-pack/minecraft-infernal-mobs-data-pack-edition/).
+
 ## Disclaimer
 
 The Minecraft brand belongs to Xbox Game Studios and Mojang Studios. All another rights reserved by their respective owners.
