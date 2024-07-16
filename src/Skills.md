@@ -1,6 +1,6 @@
 # Minecraft Infernal Mobs --> Skills List
 
-The 28 skills implemented for the mobs are the following.
+The 28 skills implemented for the mobs are the following:
 
 ### 1UP
 

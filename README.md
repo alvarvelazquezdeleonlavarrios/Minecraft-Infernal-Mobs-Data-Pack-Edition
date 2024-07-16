@@ -4,7 +4,7 @@
 
 Welcome! This is a personal project about a data pack for Minecraft (Java Edition only), inspired on the iconic mod of the same name, [Infernal Mobs](https://www.curseforge.com/minecraft/mc-mods/atomicstrykers-infernal-mobs), developed by **AtomicStryker** for CurseForge.
 
-This data pack tries to recreate the same experience of the mod, **without needing the user to install additional software** on the game or PC, just copy the data pack folder when creating a new world or directly on the world's save path.
+This data pack tries to recreate the same experience of the mod, **without needing the user to install additional software** on the game or PC, just copy the data pack folder when creating a new world or directly on an existing world's path.
 
 | Rare Mob | Ultra Mob | Infernal Mob |
 | ---- | ---- | ---- |
@@ -115,9 +115,9 @@ For his [Minecraft Tutorials](https://www.youtube.com/playlist?list=PLG79zAI7kIC
 
 ## External References
 
-You can also find this Data Pack in the following web sites:
+You can also find this Data Pack in the following websites:
 
-- [Planet Minecraft](https://www.planetminecraft.com/data-pack/minecraft-infernal-mobs-data-pack-edition/).
+- [Planet Minecraft](https://www.planetminecraft.com/data-pack/minecraft-infernal-mobs-data-pack-edition/)
 
 ## Disclaimer
 
